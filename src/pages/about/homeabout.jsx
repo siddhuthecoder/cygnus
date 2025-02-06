@@ -35,7 +35,7 @@ function HomeAbout(){
                     <div className="w-full h-auto px-4 py-2 flex flex-col justify-center items-center about-border">
                         <div className="w-full h-[300px] md:h-[460px] p-2 grid grid-flow-col grid-cols-12 grid-rows-12 gap-2 ">
                             <div className="col-span-7 row-span-7  rounded-md">
-                            <img className="w-full h-full object-cover rounded-md" alt="image" src={"https://res.cloudinary.com/db552uxtr/image/upload/v1738782437/37e9c1b2142f92a58d477d44cd21c6dd_yq6xhp.jpg"} />
+                            <img className="w-full h-full object-cover rounded-md" alt="image" src={"https://res.cloudinary.com/db552uxtr/image/upload/v1738871021/cygnus_about_n8tpyi.jpg"} />
                             </div>
                             <div className="col-span-7 row-span-5 rounded-md">
                                 <img className="w-full h-full object-cover rounded-md " alt="image" src={"https://res.cloudinary.com/db552uxtr/image/upload/v1738788966/IMG-20250206-WA0006_quiu8k.jpg"} />
