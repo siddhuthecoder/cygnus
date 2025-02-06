@@ -94,7 +94,7 @@ function EventPage(){
                                         </div>
                                     </div>
                                     <div className="w-full md:w-auto h-full flex flex-col justify-center items-start md:items-end">
-                                        <button className="w-auto h-auto px-6 py-[10px] rounded-[4px] bg-cy-primary-text font-serif font-semibold text-center text-cygnus-white">
+                                        <button    onClick={() => navigate("/sports", { state: { from: location } })}className="w-auto h-auto px-6 py-[10px] rounded-[4px] bg-cy-primary-text font-serif font-semibold text-center text-cygnus-white">
                                             REGISTER NOW 
                                         </button>
                                     </div>
