@@ -1,0 +1,325 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html{
+  background-color: green;
+}
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.navitem::after{
+  position: absolute;
+  padding: 0px 16px;
+  inset: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  content: attr(data-content);
+  transform: translateY(24px);
+  font-family: "Source Serif Pro";
+  font-size: 18px;
+  line-height: 28px;
+  color: #012D6E;
+}
+.navitem:hover::after{
+  transform: translateY(0px);
+  opacity: 1;
+  transition:  transform ease-in-out 300ms;
+}
+
+.backfacevisability{
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+} 
+
+.video-border{
+  border-image: url("/images/videoborder.png");
+  border-image-slice:45 45 45 45;
+  border-image-width: 45px;
+  border-image-outset: 20px 20px 24px 20px;
+  border-image-repeat: stretch;
+}
+
+.about-border{
+  border-image: url("/images/aboutborder.png");
+  border-image-slice:30 30 30 30;
+  border-image-width: 35px;
+  border-image-outset: 28px 20px;
+  border-image-repeat: stretch;
+}
+
+.event-border{
+  border-image: url("/images/evrntsbox.png");
+  border-image-slice:80 80 80 80;
+  border-image-width: 60px;
+  border-image-outset: 40px;
+  border-image-repeat: stretch;
+}
+.highlight-border{
+  /* background-color: #535bf2; */
+  border-image: url("/images/highborder.png");
+  border-image-slice:80 80 80 80;
+  border-image-width: 80px;
+  border-image-outset: 40px;
+  border-image-repeat: stretch;
+  /* border-width: 10px; */
+}
+.event-border-two{
+  border-image: url("/images/evrntsboxtwo.png");
+  border-image-slice:80 80 80 80;
+  border-image-width: 80px;
+  border-image-outset: 0px;
+  border-image-repeat: stretch;
+}
+
+.about-border-box{
+  border-image: url("/images/aboutborderbox.png");
+  border-image-slice:40 40 40 40;
+  border-image-width: 40px;
+  border-image-outset: 0px 8px;
+  border-image-repeat: stretch;
+  border-width: 40px;
+}
+
+.sign-border{
+  border-image: url("/images/loginbox.png");
+  border-image-slice:35;
+  border-image-width: 35px;
+  border-image-repeat:stretch;
+  border-width: 32px 32px 30px 30px;
+}
+
+/* .bg-top-border-repeat{
+  background-image:  url("src/assets/images/borderrepertimage.png");
+} */
+.titleImageShadow:hover{
+    filter: drop-shadow(0px 40px 40px black );
+    
+}
+.titletransitioneffect{
+    transition-property: filter;
+    transition-duration: 400ms;
+    transition-timing-function: ease-out;
+}
+
+.animatelftdots{
+  animation: lftdotsanimation 20s linear infinite ;
+}
+.animatergtdots{
+  animation: rtdotsanimation 40s linear infinite ;
+}
+
+.container3d{
+  perspective: 1000px;
+}
+.wrapper{
+  transform-style: preserve-3d;
+}
+.front , .back{
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+}
+.back{
+  transform: rotateX(-180deg);
+}
+.moveleft{
+  animation: leftmov 1200s linear infinite,wiggle 6s ease-in-out infinite;
+}
+.movert{
+  animation: rtmov 1200s linear infinite,wiggle 6s ease-in-out infinite;
+}
+.moveleft2{
+  animation: leftmov2 1200s linear infinite,wiggle 6s ease-in-out infinite;
+}
+.movert2{
+  animation: rtmov2 1200s linear infinite,wiggle 6s ease-in-out infinite;
+}
+
+.moveleftdelay1{
+    animation: moveleftwithdelay 900s linear 0s infinite,wiggle 6s ease-in-out infinite;
+}
+.moveleftdelay2{
+  animation: moveleftwithdelay 900s linear 160s infinite,wiggle 6s ease-in-out infinite;
+}
+.moveleftdelay3{
+  animation: moveleftwithdelay 900s linear 320s infinite,wiggle 6s ease-in-out infinite;
+}
+.moveleftdelay4{
+  animation: moveleftwithdelay 900s linear 480s infinite,wiggle 6s ease-in-out infinite;
+}
+.slowmove{
+  animation: slowmov 3000s linear infinite
+}
+.innershadow{
+  box-shadow: inset 0px 10px 20px rgba(0, 0, 0, 0.25),inset 0px -10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.animatonpath1{
+    stroke-dasharray: 800; /* Length of the path */
+    stroke-dashoffset: 800; /* Initially hide the path */
+    animation: draw 3s ease-in-out backwards; /* Animate the path over 4 seconds */
+}
+.animatonpath2{
+  stroke-dasharray: 800; /* Length of the path */
+  stroke-dashoffset: 800; /* Initially hide the path */
+  animation: draw 3s ease-in-out backwards 1s; /* Animate the path over 4 seconds */
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0; /* Draw the path */
+  }
+}
+
+@keyframes moveleftwithdelay {
+  0%{
+    left: -20px;
+  }
+  100%{
+    left: 1440px;
+  }
+}
+@keyframes slowmov {
+  0%{
+      right: 256px;
+  }
+  100%{
+      right: 840px;
+  }
+}
+@keyframes  wiggle {
+  0%, 100% { transform: rotate(-3deg) }
+  50% { transform: rotate(3deg) }
+}
+@keyframes leftmov {
+  0%{
+    right: 320px
+  }
+  100%{
+    right:  1000px;
+  }
+}
+@keyframes rtmov {
+  0%{
+    left: 320px;
+  }
+  100%{
+    left:1000px;
+  }
+  
+}
+@keyframes leftmov2 {
+  0%{
+    right: 160px
+  }
+  100%{
+    right:  840px;
+  }
+}
+@keyframes rtmov2 {
+  0%{
+    left: 160px;
+  }
+  100%{
+    left: 840px;
+  }
+  
+}
+
+
+
+@keyframes rotatep {
+  0%{
+      transform: rotateX(0deg);
+  }
+  50%{
+      transform: rotateX(180deg);
+  }
+  100%{
+      transform: rotateX(360deg);
+  }
+}
+
+@keyframes lftdotsanimation {
+  0%,100%{
+    left: 16px;
+  }
+  50%{
+    left: 156px;
+  }
+}
+
+@keyframes rtdotsanimation {
+  0%,100%{
+    right: 120px;
+  }
+  50%{
+    right: 800px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

@@ -1,0 +1,3 @@
+The `fonts` folder in the React project structure is used to store custom font files that are used throughout the application. By organizing font files in a dedicated folder, it becomes easier to manage and reference them within the project. Typically, this folder is placed inside the `src/assets` directory, which is a common convention for storing static assets such as images, fonts, and stylesheets.
+
+Example structure:

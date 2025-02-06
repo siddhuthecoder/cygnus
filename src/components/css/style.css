@@ -1,0 +1,66 @@
+
+  
+  .skeleton {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .skeleton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(90deg, transparent 20%, rgba(255, 255, 255, 0.6) 24% 26%, transparent 100%); */
+    background: linear-gradient(90deg, transparent 35%, rgba(228, 206, 206, 0.6) 40% , transparent 100%);
+    background-size: 200% 100%;
+    animation: skeleton-animation 2s linear infinite;
+    animation-delay: 0.2s;
+  }
+  
+  .leftcurtain{
+    animation: leftmove 3s ease-in-out 0.4s forwards;
+  }
+  .rightcurtain{
+    animation: rightmove 3s ease-in-out 0.4s forwards;
+  }
+
+  @keyframes leftmove {
+    0%{
+        left:0%;
+        opacity: 1;
+    }
+    95%{
+        opacity: 0;
+    }
+    100%{
+        left:-100%;
+        opacity: 0;
+    }
+  }
+  @keyframes rightmove {
+    0%{
+        right:0%;
+        opacity: 1;
+    }
+    95%{
+        opacity: 0;
+    }
+    100%{
+        right:-100%;
+        opacity: 0;
+    }
+    
+  }
+
+  @keyframes skeleton-animation {
+    0% {
+      background-position: -100% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
