@@ -5,6 +5,7 @@ import design from '/images/Design.png';
 import image1 from '/images/cygnus_logo.png';
 import routesconfig from "../../configs/routesconfig";
 
+
 const Footer = () => {
   return (
     <div className="w-full h-auto bg-[#E1CA6D] border-t-4 border-red-800">

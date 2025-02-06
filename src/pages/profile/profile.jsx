@@ -111,7 +111,7 @@ const ProfilePage = () => {
                       <p className="text-[24px] text-[#E1CA6D]">{collegeId}</p>
                     </div>
                     <div className="w-full h-auto flex flex-col justify-start items-start gap-1">
-                      <p className="font-semibold text-[19px] text-white">CGMS ID:</p>
+                      <p className="font-semibold text-[19px] text-white">Cygnus ID:</p>
                       <p className="text-[24px] text-[#E1CA6D]">{cygnusId}</p>
                     </div>
                     <div className="w-full h-auto flex flex-col justify-start items-start gap-1">

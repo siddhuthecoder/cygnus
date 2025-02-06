@@ -38,7 +38,7 @@ function HomeAbout(){
                             <img className="w-full h-full object-cover rounded-md" alt="image" src={"https://res.cloudinary.com/db552uxtr/image/upload/v1738871021/cygnus_about_n8tpyi.jpg"} />
                             </div>
                             <div className="col-span-7 row-span-5 rounded-md">
-                                <img className="w-full h-full object-cover rounded-md " alt="image" src={"https://res.cloudinary.com/db552uxtr/image/upload/v1738788966/IMG-20250206-WA0006_quiu8k.jpg"} />
+                                <img className="w-full h-full object-cover rounded-md " alt="image" src={"https://res.cloudinary.com/db552uxtr/image/upload/v1738871180/about2_jxzxkt.jpg"} />
                             </div>
                             <div className="col-span-5 row-span-5 rounded-md">
                             <img className="w-full h-full object-cover rounded-md" alt="image" src={"https://res.cloudinary.com/db552uxtr/image/upload/v1738794576/studentmitra_zmcbwt.jpg"} />

@@ -3,13 +3,13 @@ import border from '/images/border1.png';
 import border2 from '/images/border2.png';
 import map from '/images/map.png';
 import { FaXTwitter } from "react-icons/fa6";
-import { Facebook,Instagram,Linkedin } from 'lucide-react';
+import {Facebook,Instagram,Linkedin,Youtube,MessageCircleCode} from 'lucide-react';
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt} from 'react-icons/fa';
 import Pagelayout from '../../components/layout/pagelayout';
 
 const Homecontact = () => {
   return (
-    <Pagelayout className={"min-h-full md:min-h-screen"} title="Contact">
+    <Pagelayout className={"min-h-full md:min-h-screen"} title="Contact Us">
       <div className="w-full h-auto flex flex-col justify-center items-center py-8 md:py-12 lg:py-16 px-6 md:px-16 lg:px-28">  
 
       {/* Main Content */}
@@ -22,7 +22,7 @@ const Homecontact = () => {
               <div className="w-full h-auto flex flex-row justify-start items-start gap-4">
                 <FaMapMarkerAlt className="text-[#E1CA6D] w-12 h-12  md:w-6 md:h-6 " />
                 <p className='grow h-auto font-serif font-normal text-balance text-white text-base md:text-xl'>
-                  Room No. FF-62, I3 Block, Rajiv Gandhi
+                  Room No. FF-63, I3 Block, Rajiv Gandhi
                   University of Knowledge Technologies,
                   Nuzvid, Andhra Pradesh, 521202.
                 </p>
@@ -43,8 +43,8 @@ const Homecontact = () => {
             <div className='w-full h-auto flex flex-col justify-center items-start  gap-4'>
               <p className="w-full h-auto font-Young font-normal text-white text-left text-base  sm:text-lg md:text-2xl">Follow us on:</p>
               <div className="w-full h-auto flex flex-row justify-start items-center gap-6">
-                <a href="#" className="text-[#E1CA6D] hover:text-blue">
-                  <Facebook className='h-6 w-6'/>
+                <a href="https://whatsapp.com/channel/0029Vb2XSpF0lwgjjkvGOk1C" className="text-[#E1CA6D] hover:text-blue">
+                  <MessageCircleCode  className='h-6 w-6'/>
                 </a>
                 <a href="https://x.com/CYGNUS_2K25" className="text-[#E1CA6D] hover:text-blue">
                   <FaXTwitter className="h-6 w-6 " /> 
@@ -52,9 +52,13 @@ const Homecontact = () => {
                 <a href="https://www.instagram.com/cygnus_2k25?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="text-[#E1CA6D] hover:text-blue">
                   <Instagram className='h-6 w-6'/>
                 </a>
-                <a href="#" className="text-[#E1CA6D] hover:text-blue">
+                <a href="https://www.linkedin.com/company/cygnus2k25/" className="text-[#E1CA6D] hover:text-blue">
                   <Linkedin className='h-6 w-6'/>
                 </a>
+                <a href="https://www.youtube.com/@rgukt_studentmitra" className="text-[#E1CA6D] hover:text-blue">
+                  <Youtube  className='h-6 w-6'/>
+                </a>
+                
               </div>
 
             {/* Message Section */}

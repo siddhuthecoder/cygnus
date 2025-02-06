@@ -13,7 +13,7 @@ const MoreAbout = () => {
         </div>
         <div className='order-1 md:order-2 moreabout-border  about-border-box '>
           <div className='w-[240px] h-[160px] md:w-[360px] md:h-[240px] bg-white'>
-              <img className="w-full h-full object-cover " alt="image" src={"https://res.cloudinary.com/db552uxtr/image/upload/v1738782437/37e9c1b2142f92a58d477d44cd21c6dd_yq6xhp.jpg"} />
+              <img className="w-full h-full object-cover " alt="image" src={"https://res.cloudinary.com/db552uxtr/image/upload/v1738871424/about1_o8ybjk.jpg"} />
           </div>
         </div>
       </div>
