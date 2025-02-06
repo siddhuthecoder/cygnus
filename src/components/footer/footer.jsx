@@ -1,5 +1,5 @@
 import React from "react";
-import {Facebook,Instagram,Linkedin } from 'lucide-react';
+import {Facebook,Instagram,Linkedin,Youtube,MessageCircleCode} from 'lucide-react';
 import { FaXTwitter } from "react-icons/fa6";
 import design from '/images/Design.png';
 import image1 from '/images/cygnus_logo.png';
@@ -14,7 +14,7 @@ const Footer = () => {
           <img src={image1} alt="logo" className="h-16" />
           <div className='w-auto h-auto flex flex-col justify-center items-center gap-0'>
             <p className="w-full h-auto text-start text-4xl/[36px] text-[#012D6E] font-bold font-league tracking-wide">CYGNUS</p>
-            <p className="w-full h-auto  text-sm/[12px] text-[#890304] font-league font-semibold">THE LEGACY UNFOLDS</p>
+            <p className="w-full h-auto  text-sm/[12px] text-[#890304] font-league font-semibold">THE LEGACY CONTINUES</p>
           </div>
         </div>
 
@@ -54,7 +54,7 @@ const Footer = () => {
         <div className="font-serif flex flex-col justify-start items-start md:items-center">
           <h3 className="text-2xl font-semibold text-[#022E6E]">Contact</h3>
           <p className="w-full h-auto text-start md:text-center text-[#000000] mt-2 text-xl">
-            R.No. FF -62, I3 Block, <br />
+            R.No. FF -63, I3 Block, <br />
             RGUKT Nuzvid, <br />
             Andhra Pradesh, 521202.
           </p>
@@ -69,8 +69,8 @@ const Footer = () => {
         <h4 className="text-[#022E6E] font-semibold text-2xl">Follow us on</h4>
         <div className="flex justify-center md:justify-start space-x-6 mt-2">
         
-            <a href="#" className="text-black hover:text-[#022E6E]-400">
-              <Facebook className='h-6 w-6 stroke-none fill-black'/>{/* Facebook */}
+            <a href="https://whatsapp.com/channel/0029Vb2XSpF0lwgjjkvGOk1C" className="text-black hover:text-[#022E6E]-400">
+              <MessageCircleCode className='h-6 w-6 '/>{/* Facebook */}
             </a>
             <a href="https://x.com/CYGNUS_2K25" className="text-black hover:text-black-400">
               <FaXTwitter className="h-6 w-6 text-balck" />{/* Twitter */}
@@ -78,8 +78,11 @@ const Footer = () => {
             <a href="https://www.instagram.com/cygnus_2k25?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="text-black hover:text-pink-600">
               <Instagram className="h-6 w-6"/>{/* Instagram */}
             </a>
-            <a href="#" className="text-black hover:text-blue-800">
+            <a href="https://www.linkedin.com/company/cygnus2k25/" className="text-black hover:text-blue-800">
               <Linkedin className="h-6 w-6"/> {/* LinkedIn */}
+            </a>
+            <a href="https://www.youtube.com/@rgukt_studentmitra" className="text-black hover:text-blue-800">
+              <Youtube className="h-6 w-6"/> {/* LinkedIn */}
             </a>
         </div>
 

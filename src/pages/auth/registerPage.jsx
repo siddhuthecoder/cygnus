@@ -35,10 +35,10 @@ function RegisterPage({ title }) {
                               </div>
                               <div className="flex flex-col justify-center items-center">
                                   <div >
-                                      <p className="font-serif text-[19px]">PreEvents</p>
+                                      <p className="font-serif text-[19px]">Cygnus</p>
                                   </div>
                                   <div> 
-                                      <p className="text-[22px] font-serif w-64 text-center text-[#E1CA6D]">Echoes of the Past: A Debate on Tradition</p>
+                                      <p className="text-[22px] font-serif w-64 text-center text-[#E1CA6D]"> The Legacy Continues</p>
                                   </div>
                               </div>
                           </div>

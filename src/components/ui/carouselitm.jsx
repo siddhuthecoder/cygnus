@@ -111,7 +111,7 @@ export function SponsersCardCarouleItems ({data:sponsor}){
     return(
         <div className="w-full h-[240px] flex flex-col justify-center items-cente p-4">
             <div key={sponsor?.id} className="w-full h-full flex flex-col items-center justify-center gap-4">
-              <p className="w-full h-auto font-serif font-semibold text-center text-white text-base">Designing Partner</p>
+              <p className="w-full h-auto font-serif font-semibold text-center text-white text-base">{sponsor.title}</p>
                 <div  className="w-full grow flex flex-col items-center justify-center gap-3  shadow-md p-1 py-2  border-[1px] border-[#EEC276]">
                   <div className="bg-white w-full grow">
                     <img
