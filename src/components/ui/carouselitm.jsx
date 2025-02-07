@@ -109,11 +109,11 @@ export function CoreTeamCardCarouleItem ({data:sponser}){
 
 export function SponsersCardCarouleItems ({data:sponsor}){
     return(
-        <div className="w-full h-[240px] flex flex-col justify-center items-cente p-4">
+        <div className="w-full h-auto flex flex-col justify-center items-cente p-4">
             <div key={sponsor?.id} className="w-full h-full flex flex-col items-center justify-center gap-4">
-              <p className="w-full h-auto font-serif font-semibold text-center text-white text-base">{sponsor.title}</p>
-                <div  className="w-full grow flex flex-col items-center justify-center gap-3  shadow-md p-1 py-2  border-[1px] border-[#EEC276]">
-                  <div className="bg-white w-full grow">
+                <p className="w-full h-auto font-serif font-semibold text-center text-white text-base">{sponsor.title}</p>
+                <div  className="w-full h-[180px] flex flex-col items-center justify-center gap-3  shadow-md p-1 py-2  border-[1px] border-[#EEC276]">
+                  <div className="bg-white w-full h-full">
                     <img
                       src={sponsor?.imageUrl}
                       alt={sponsor?.name}
@@ -127,9 +127,13 @@ export function SponsersCardCarouleItems ({data:sponsor}){
 }
 
 export function CarouselProfileEventCard({data:event}){
+    const navigate = useNavigate();
+    const location = useLocation();
     return(
         <div className="h-auto w-full flex flex-col justify-center items-center gap-4 p-8">
-            <Eventcard onClick={()=>{navigate(`${routesconfig.events}/eventId-0`,{state:{from:location}})}} event={event} />
+            <Eventcard 
+                onClick={()=>{navigate(`${routesconfig.events}/${event._id}`,{state:{from:location}})}}
+               event={event} />
             <EventTimer EventTimer={event?.timeline_venue[0].date} />
         </div>
     );

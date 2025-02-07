@@ -3,10 +3,12 @@ import { Link,useLocation,useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import axiosInstance from "../../api/axiosInstance";
+import Spinner from "../../components/ui/spinner";
 
 export default function SigninForm() {
   const navigate=useNavigate();
   const location = useLocation();
+  const [loading,setLoading]=useState(false);
   let [formdata, setFormdata] = useState({
     email: "",
     password: "",
@@ -26,6 +28,7 @@ export default function SigninForm() {
 
   let handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true);
 
     console.log(formdata);
 
@@ -52,8 +55,10 @@ export default function SigninForm() {
       }
     } catch (error) {
       console.error("Error during login:", error);
-      toast.error("Login failed. Please check your credentials.");
+      // toast.error("Login failed. Please check your credentials.");
+      toast.error(error.response?.data?.message);
     }
+    setLoading(false);
   };
 
   return (
@@ -107,8 +112,8 @@ export default function SigninForm() {
         </div>
 
         <div className="flex justify-center">
-          <button className="rounded-md bg-gradient-to-r from-[#002263] via-[#035B9B] to-[#002263] text-white px-6 py-2 w-[120px] hover:bg-[#d9b55b]">
-            Done
+          <button className={`rounded-md ${loading?"bg-transparent":"bg-gradient-to-r from-[#002263] via-[#035B9B] to-[#002263]"} font-semibold  text-white px-6 py-2 h-12 w-[160px]  flex flex-row justify-center items-center`}>
+            {loading?<span className="w-auto h-auto flex flex-row justify-center items-center gap-3 "><Spinner className={"w-8 h-8"} id={"g1234"}/><p className="text-lg font-semibold text-cy-secondary-bg">Loading...</p></span>:"Done"}
           </button>
         </div>
 

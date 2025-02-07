@@ -33,9 +33,10 @@ export default function Carousel({data_array,children,childComp:ChildComp,classN
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 1000,
-        autoplaySpeed: 5000,
+        speed: 800,
+        autoplaySpeed: 1600,
         cssEase: "linear",
+        pauseOnHover: true,
         responsive: [
             {
               breakpoint: 1024,
@@ -118,9 +119,10 @@ export function CarouselwithTwoItems ({data_array,children,childComp:ChildComp,c
       slidesToShow: 4,
       slidesToScroll: 1,
       autoplay: true,
-      speed: 1000,
-      autoplaySpeed: 5000,
+      speed: 600,
+      autoplaySpeed: 1200,
       cssEase: "linear",
+      pauseOnHover: true,
       responsive: [
           {
             breakpoint: 1024,
@@ -141,6 +143,7 @@ export function CarouselwithTwoItems ({data_array,children,childComp:ChildComp,c
           {
             breakpoint: 640,
             settings: {
+              swipeToSlide: true,
               slidesToShow: 1,
               slidesToScroll: 1,
               nextArrow: <SampleNextArrow />,

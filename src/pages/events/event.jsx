@@ -1,4 +1,5 @@
 import React, { useState ,useEffect} from "react";
+import { motion } from "motion/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 import map from '/images/map.png';
@@ -9,6 +10,7 @@ import eventdivider from '/images/eventdivider.png';
 import { useNavigate,useLocation,useParams } from "react-router-dom";
 import routesconfig from "../../configs/routesconfig";
 import axiosInstance from "../../api/axiosInstance";
+import toast from "react-hot-toast";
 
 const Event = () => {
   const [isOverviewVisible, setOverviewVisible] = useState(false);
@@ -31,6 +33,7 @@ const Event = () => {
   const [contactDetails, setContactDetails] = useState([]);
   const [imageUrl,setImagUrl]=useState("");
   const [eventstart,setEventstart]=useState();
+  const [eventstatus,setEventStatus] = useState(false);
 
 
   function formatDate(inputDate) {
@@ -75,7 +78,7 @@ const Event = () => {
         const remainingMinutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)); // Remaining minutes
         const remainingSeconds = Math.floor((distance % (1000 * 60)) / 1000); // Remaining seconds
     
-        return `${days}d : ${remainingHours}h : ${remainingMinutes}m : ${remainingSeconds}s`;
+        return `${Number.isNaN(days)?0:days}d : ${Number.isNaN(remainingHours)?0:remainingHours}h : ${Number.isNaN(remainingMinutes)?0:remainingMinutes}m : ${Number.isNaN(remainingSeconds)?0:remainingSeconds}s`;
       }
     };
   
@@ -92,7 +95,7 @@ const Event = () => {
       const fetchEvent=async()=>{
           try{
              const response=await axiosInstance.get(`/api/events/${eventId}`);
-             console.log(response.data)
+             console.log("W",response.data)
              if(response.status=200){
                 console.log(response.data.event.timeline_venue[0].date);
                 setEventstart(response.data.event.timeline_venue[0].date);
@@ -106,7 +109,8 @@ const Event = () => {
                 setTimelineVenue(response.data.event?.timeline_venue || []);
                 setRules(response.data.event?.rules || []);
                 setContactDetails(response.data.event?.contactDetails || []);
-                setImagUrl(response.data.event.imageUrl);
+                setImagUrl(response.data.event?.imageUrl);
+                setEventStatus(response.data.event?.eventstatus);
                 
              }else{
                 console.log("Error while fetching particular event");
@@ -137,7 +141,7 @@ const Event = () => {
           </div>
           <div className=" text-white mt-4 p-2 text-center rounded-lg">
             <h3 className="text-xl font-bold">Event Starts In:</h3>
-            <p className="text-3xl text-[#E1CA6D] font-bold">{timeLeft} Hrs</p>
+            <p className="text-3xl text-[#E1CA6D] font-bold">{timeLeft}</p>
           </div>
         </div>
         {/* Right Section: Details */}
@@ -151,7 +155,15 @@ const Event = () => {
               <h2 className="text-base md:text-xl text-center md:text-start font-semibold font-serif mb-4">{tagline}</h2>
               </div>
               <div className="w-auto h-full flex flex-col justify-center items-center">
-                <button onClick={()=>{navigate(`${routesconfig.events}/${eventId}/register`)}} className="bg-gradient-to-r from-[#002263] via-[#035B9B] to-[#002263]  px-6 py-2 rounded-[4px] hover:bg-blue-600 text-white font-semibold text-base h-[40px]">
+                <button onClick={()=>{
+                  if(eventstatus){
+                    navigate(`${routesconfig.events}/${eventId}/register`);
+                  }
+                  else{
+                    toast.error("Event Registrations are not Started");
+                  }
+                    
+                  }} className="bg-gradient-to-r from-[#002263] via-[#035B9B] to-[#002263]  px-6 py-2 rounded-[4px] hover:bg-blue-600 text-white font-semibold text-base h-[40px]">
                   REGISTER NOW
                 </button>
               </div>
@@ -253,16 +265,25 @@ const Event = () => {
                 onClick={() => setOverviewVisible(!isOverviewVisible)}
               >
                 <h3 className="text-xl font-bold  text-[#E1CA6D]">Overview</h3>
+                <motion.div
+                  animate={{ rotate: isOverviewVisible ? 180 : 0 }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
+                >
                 <FontAwesomeIcon
-                  icon={toggleIcon(isOverviewVisible)}
+                  icon={faCaretDown}
                   className="w-5 h-5 text-[#E1CA6D]"
                 />
+                </motion.div>
               </div>
-              {isOverviewVisible && (
-                <p className="mt-2 font-semibold text-base">
-                 {overview}
-                </p>
-              )}
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: isOverviewVisible ? "auto" : 0, opacity: isOverviewVisible ? 1 : 0 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="overflow-hidden"
+              >
+              <p className="mt-2 font-semibold text-base">{overview}</p>
+              </motion.div>
             </div>
             <img className="w-full object-contain " src={eventdivider} alt={"eventdivider"}/>
             {/* Structure */}
@@ -272,20 +293,32 @@ const Event = () => {
                 onClick={() => setStructureVisible(!isStructureVisible)}
               >
                 <h3 className="text-xl font-bold text-[#E1CA6D]" >Structure</h3>
+                <motion.div
+                  animate={{ rotate: isStructureVisible ? 180 : 0 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                >
                 <FontAwesomeIcon
-                  icon={toggleIcon(isStructureVisible)}
+                  icon={faCaretDown}
                   className="w-5 h-5 text-[#E1CA6D]"
                 />
+                </motion.div>
               </div>
-              {isStructureVisible && (
-                <ul className="list-disc list-inside mt-2 space-y-2 font-semibold text-base">
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: isStructureVisible ? "auto" : 0, opacity: isStructureVisible ? 1 : 0 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="overflow-hidden"
+              >
+                 <ul className="list-disc list-inside mt-2 space-y-2 font-semibold text-base">
                    {rounds?.map((round, index) => (
     <li key={round._id}>
       <span className="font-semibold">Round {round.roundNumber}:{round.title}</span> {round.description}
     </li>
   ))}
                 </ul>
-              )}
+              </motion.div>
+              
             </div>
             <img className="w-full object-contain " src={eventdivider} alt={"eventdivider"}/>
             {/* Timeline */}
@@ -295,42 +328,53 @@ const Event = () => {
                 onClick={() => setTimelineVisible(!isTimelineVisible)}
               >
                 <h3 className="text-xl font-bold text-[#E1CA6D]">Timeline & Venue</h3>
+                <motion.div
+                  animate={{ rotate: isTimelineVisible ? 180 : 0 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                >
                 <FontAwesomeIcon
-                  icon={toggleIcon(isTimelineVisible)}
+                  icon={faCaretDown}
                   className="w-5 h-5 text-[#E1CA6D]"
                 />
+                </motion.div>
               </div>
-              {isTimelineVisible && (
-                <ul className="list-none mt-2 space-y-2 font-semibold text-base">
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: isTimelineVisible ? "auto" : 0, opacity: isTimelineVisible ? 1 : 0 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="overflow-hidden"
+              >
+                 <ul className="list-none mt-2 space-y-2 font-semibold text-base">
                    {timelineVenue?.map((item, index) => {
-  const formattedDate = new Date(item.date).toLocaleDateString("en-US", {
-    weekday: "short",
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-  });
+                    const formattedDate = new Date(item.date).toLocaleDateString("en-US", {
+                      weekday: "short",
+                      day: "2-digit",
+                      month: "short",
+                      year: "numeric",
+                    });
 
-  const formatTime = (time) => {
-    const hours = parseInt(time?.split(":")[0], 10);
-    const minutes = time?.split(":")[1];
-    // const period = hours >= 12 ? "PM" : "AM";
-    const formattedHours = hours % 12 || 12;
-    return `${formattedHours}:${minutes}`;
-  };
+                      const formatTime = (time) => {
+                        const hours = parseInt(time?.split(":")[0], 10);
+                        const minutes = time?.split(":")[1];
+                        // const period = hours >= 12 ? "PM" : "AM";
+                        const formattedHours = hours % 12 || 12;
+                        return `${formattedHours}:${minutes}`;
+                      };
 
-  const startTimeFormatted = formatTime(item.startTime);
-  const endTimeFormatted = formatTime(item.endTime);
+                      const startTimeFormatted = formatTime(item.startTime);
+                      const endTimeFormatted = formatTime(item.endTime);
 
-  const timeSlot =` ${startTimeFormatted} - ${endTimeFormatted}`;
+                      const timeSlot =` ${startTimeFormatted} - ${endTimeFormatted}`;
 
-  return (
-    <li key={index}>
-      {`Round ${item.roundNumber} - ${formattedDate}, ${timeSlot} | ${item.venue}`}
-    </li>
-  );
-})}
+                      return (
+                        <li key={index}>
+                          {`Round ${item.roundNumber} - ${formattedDate}, ${timeSlot} | ${item.venue}`}
+                        </li>
+                      );
+                    })}
                 </ul>
-              )}
+              </motion.div>
             </div>
             <img className="w-full object-contain " src={eventdivider} alt={"eventdivider"}/>
 
@@ -341,18 +385,29 @@ const Event = () => {
                 onClick={() => setRulesVisible(!isRulesVisible)}
               >
                 <h3 className="text-xl font-bold text-[#E1CA6D]">Rules & Regulations</h3>
+                <motion.div
+                  animate={{ rotate: isRulesVisible ? 180 : 0 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                >
                 <FontAwesomeIcon
-                  icon={toggleIcon(isRulesVisible)}
+                  icon={faCaretDown}
                   className="w-5 h-5 text-[#E1CA6D]"
                 />
+                </motion.div>
               </div>
-              {isRulesVisible && (
-                <ol className="list-decimal list-inside mt-2 space-y-2 font-semibold text-base">
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: isRulesVisible ? "auto" : 0, opacity: isRulesVisible ? 1 : 0 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="overflow-hidden"
+              >
+                 <ol className="list-decimal list-inside mt-2 space-y-2 font-semibold text-base">
                      {rules.map((rule, index) => (
-          <li key={index}>{rule}</li>
-        ))}
+                        <li key={index}>{rule}</li>
+                      ))}
                 </ol>
-              )}
+              </motion.div>
             </div>
             <img className="w-full object-contain " src={eventdivider} alt={"eventdivider"}/>
 
@@ -363,21 +418,31 @@ const Event = () => {
                 onClick={() => setContactVisible(!isContactVisible)}
               >
                 <h3 className="text-xl font-bold text-[#E1CA6D]">Contact Details</h3>
+                <motion.div
+                  animate={{ rotate: isContactVisible ? 180 : 0 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                >
                 <FontAwesomeIcon
-                  icon={toggleIcon(isContactVisible)}
+                  icon={faCaretDown}
                   className="w-5 h-5 text-[#E1CA6D]"
                 />
+                </motion.div>
               </div>
-              {isContactVisible && (
-                <div className=" text-white  rounded-lg mt-2 font-semibold text-base">
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: isContactVisible ? "auto" : 0, opacity: isContactVisible ? 1 : 0 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="overflow-hidden"
+              >
+                 <div className=" text-white  rounded-lg mt-2 font-semibold text-base">
                      {contactDetails.map((contact) => (
-        <p key={contact._id} className="mt-2">
-          <span className="font-semibold">{contact.name}:</span> {contact.phone}
-        </p>
-      ))} 
-      
+                        <p key={contact._id} className="mt-2">
+                          <span className="font-semibold">{contact.name}:</span> {contact.phone}
+                        </p>
+                      ))}    
                 </div>
-              )}
+              </motion.div>
             </div>
         </div>
       </div>

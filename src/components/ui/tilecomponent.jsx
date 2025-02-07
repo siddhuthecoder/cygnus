@@ -26,7 +26,7 @@ function TileComponent({className, children}){
               trigger: '.gsapRotaconatiner',
               start: 'top 95%',
               end: 'bottom 10%',
-              toggleActions: "restart pause restart pause",
+              toggleActions: "restart  restart pause",
               once: false,
             }
         });
@@ -57,9 +57,7 @@ function TileComponent({className, children}){
                 <div className="w-[2px] h-[2px] bg-dots-gradient rounded-full"></div>
             </div>
             <div className=" absolute container3d left-7 md:left-24  lg:left-32 w-[164px] md:w-[300px] h-[83px] lg:h-28 flex flex-row justify-center items-center ">  
-                {/* <img className="h-full object-contain" src={tilecardbg} alt="tileimage"/>
-                <p className="absolute font-Young font-normal text-[#012D6E] text-center text-3xl">{children}</p> */}
-                <div className="absolute wrapper w-full h-full flex flex-row justify-center items-center gsapRotaconatiner"> {/*animate-titleflip*/}
+                <div className="absolute wrapper w-full h-full flex flex-row justify-center items-center gsapRotaconatiner">
                     <div className="back w-full h-full absolute flex flex-col justify-center items-center">
                         <img className="h-full object-contain" src={backtile} alt="tileimage"/>
                     </div>

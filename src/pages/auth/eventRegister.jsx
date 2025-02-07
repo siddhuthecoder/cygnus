@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { useNavigate,useParams } from "react-router-dom";
 import toast from "react-hot-toast";
 import axiosInstance from "../../api/axiosInstance";
+import { cn } from "../../utils";
 
-export default function EventRegister({ loggedInUser, eventType, maxParticipants }) {
+export default function EventRegister({className, loggedInUser, eventType, maxParticipants }) {
   console.log("Props Received:", { maxParticipants, eventType, loggedInUser });
   let { id } = useParams();
    const navigate = useNavigate();
@@ -43,42 +44,6 @@ export default function EventRegister({ loggedInUser, eventType, maxParticipants
     });
   };
 
-  // const handleSubmit = async(event) =>{
-  //   const token = localStorage.getItem("token"); 
-  //     if (!token) {
-  //       navigate("/login");   
-  //       return;
-  //     }
-  //   const cygnusIds=[...formdata.teamMembers];
-  //   event.preventDefault();
-  //   console.log("Final Form Data:", cygnusIds);
-  //   const payload = {
-  //     cygnusIds: cygnusIds.filter(id => id !== "") 
-  //   };
-    
-  //   try{
-  //     const response = await axiosInstance.post(
-  //       `api/events/${id}/register`,  
-  //       payload, 
-  //       { 
-  //         headers: {
-  //           Authorization: `Bearer ${token}`,
-  //         }
-  //       }
-  //     );
-  //     if(response.status==200){
-  //         toast.success("Successfully Registered");
-  //         navigate("/");
-  //     }else{
-  //         toast.error(response.data.message);
-  //     }
-  //   }catch(error){
-  //     console.error("Error sending request:", error);
-  //     // toast.error(error.response.data.message);
-  //   }
-    
-  // };
-
 
   const handleSubmit = async (event) => {
     const token = localStorage.getItem("token"); 
@@ -115,6 +80,7 @@ export default function EventRegister({ loggedInUser, eventType, maxParticipants
         toast.error(response.data.message || "Unknown error occurred");
       }
     } catch (error) {
+      
       console.error("Error sending request:", error);
   
       // Log the error response from the server for more details
@@ -130,7 +96,7 @@ export default function EventRegister({ loggedInUser, eventType, maxParticipants
   };
   
   return (
-    <div className="w-[430px] p-6 rounded-2xl flex flex-col justify-between font-serif">
+    <div className={cn("w-full md:w-[430px] px-0 py-6 rounded-2xl flex flex-col justify-between font-serif",className)}>
       <form className="h-full flex flex-col items-center" onSubmit={handleSubmit}>
         <div className="flex flex-col gap-4 w-full">
           {[
@@ -140,7 +106,7 @@ export default function EventRegister({ loggedInUser, eventType, maxParticipants
             { label: "ID Number", name: "Id", value: formdata.Id },
             { label: "Team Member 1", name: "TeamMember1", value: formdata.TeamMember1 },
           ].map(({ label, name, value }) => (
-            <div key={name} className="flex flex-col w-[430px] h-[74px]">
+            <div key={name} className="flex flex-col w-full md:w-[430px] h-[74px]">
               <label htmlFor={name} className="text-white text-lg font-bold">{label}:</label>
               <input
                 type="text"
@@ -155,7 +121,7 @@ export default function EventRegister({ loggedInUser, eventType, maxParticipants
           {/* Render team member inputs dynamically */}
           {eventType === "team" && formdata.teamMembers.length > 0 &&
             formdata.teamMembers.map((member, index) => (
-              <div key={index} className="flex flex-col w-[430px] h-[74px]">
+              <div key={index} className="flex flex-col w-full md:w-[430px] h-[74px]">
                 <label className="text-white text-lg font-bold">{`Team Member ${index + 2}:`}</label>
                 <input
                   type="text"

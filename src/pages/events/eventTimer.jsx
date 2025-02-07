@@ -47,7 +47,7 @@ const EventTimer = ({EventTimer,headingtext="Event Starts In:",headingclass,time
           const remainingMinutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)); // Remaining minutes
           const remainingSeconds = Math.floor((distance % (1000 * 60)) / 1000); // Remaining seconds
   
-          return `${totalDays}d : ${totalHours}h : ${remainingMinutes}m : ${remainingSeconds}s`;
+          return `${Number.isNaN(totalDays)?0:totalDays}d : ${Number.isNaN(totalHours)?0:totalHours}h : ${Number.isNaN(remainingMinutes)?0:remainingMinutes}m : ${Number.isNaN(remainingSeconds)?0:remainingSeconds}s`;
       }
   };
   

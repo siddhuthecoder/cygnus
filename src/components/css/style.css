@@ -6,6 +6,25 @@
     position: relative;
     overflow: hidden;
   }
+  .pskeleton {
+    width: 260px;
+    height: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .pskeleton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(90deg, transparent 20%, rgba(255, 255, 255, 0.6) 24% 26%, transparent 100%); */
+    background: linear-gradient(90deg, transparent 35%, rgba(228, 206, 206, 0.6) 40% , transparent 100%);
+    background-size: 200% 100%;
+    animation: skeleton-animation 2s linear infinite;
+    animation-delay: 0.2s;
+  }
   
   .skeleton::after {
     content: "";
@@ -22,10 +41,10 @@
   }
   
   .leftcurtain{
-    animation: leftmove 3s ease-in-out 0.4s forwards;
+    animation: leftmove 3s ease-in-out 0.4s infinite;
   }
   .rightcurtain{
-    animation: rightmove 3s ease-in-out 0.4s forwards;
+    animation: rightmove 3s ease-in-out 0.4s infinite;
   }
 
   @keyframes leftmove {

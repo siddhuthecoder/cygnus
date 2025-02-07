@@ -1,4 +1,5 @@
 import React, {useEffect,useState} from "react";
+import "../../components/css/style.css";
 import ResTitlePagelayout from "../../components/layout/restitelpagecomp";
 import MainLayout from "../../components/layout/MainLayout";
 import BorderBg from "../../components/ui/borderbg";
@@ -20,6 +21,7 @@ const ProfilePage = () => {
   const [email,setEmail]=useState("");
   const [revents,setREvents]=useState([]);
   const [loading,setLoading] = useState(true);
+  const [userLoading,setUserLoading] = useState(true);
 
 
   const navigate = useNavigate();
@@ -50,14 +52,20 @@ const ProfilePage = () => {
             Authorization: `Bearer ${token}`, 
           },
         });
-       
         setName(response.data.userdetails.name);
         setCollegeId(response.data.userdetails.collegeId);
         setCygnusId(response.data.userdetails.cygnusId);
         setPhone(response.data.userdetails.phone);
         setEmail(response.data.userdetails.email);
       } catch (error) {
-        console.error("Error fetching user details:", error);
+        if(error.status==403){
+          localStorage.removeItem("cygnusId");
+            localStorage.removeItem("token");
+            localStorage.removeItem("name");
+            localStorage.removeItem("collegId");
+            navigate('/login');
+        }
+        console.error("Error fetching user details:", error.status);
       }
       setLoading(false);
     };
@@ -70,7 +78,7 @@ const ProfilePage = () => {
       const token = localStorage.getItem("token"); 
       console.log(token)
       if (!token) {
-        navigate("/login");   
+        navigate("/login");
         return;
       }
 
@@ -87,6 +95,7 @@ const ProfilePage = () => {
       } catch (error) {
         console.error("Error fetching user details:", error);
       }
+      setUserLoading(false);
     };
 
     fetchUserDetails();
@@ -104,24 +113,29 @@ const ProfilePage = () => {
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-10 ">
                     <div className="w-full h-auto flex flex-col justify-start items-start gap-1">
                       <p className="font-semibold text-[19px] text-white">Name:</p>
-                      <p className="text-[24px] text-[#E1CA6D]">{name}</p>
+                      <div className={`${userLoading?"block":"hidden"} rounded-md bg-[#ab5a5a] pskeleton`}></div>
+                      <p className={`${userLoading?"hidden":"block"} text-[24px] text-[#E1CA6D]`}>{name}</p>
                     </div>
                     <div className="w-full h-auto flex flex-col justify-start items-start gap-1">
                       <p className="font-semibold text-[19px] text-white">ID Number:</p>
-                      <p className="text-[24px] text-[#E1CA6D]">{collegeId}</p>
+                      <div className={`${userLoading?"block":"hidden"} w-[260px] h-8 rounded bg-[#ab5a5a] pskeleton`}></div>
+                      <p className={`${userLoading?"hidden":"block"} text-[24px] text-[#E1CA6D]`}>{collegeId}</p>
                     </div>
                     <div className="w-full h-auto flex flex-col justify-start items-start gap-1">
                       <p className="font-semibold text-[19px] text-white">Cygnus ID:</p>
-                      <p className="text-[24px] text-[#E1CA6D]">{cygnusId}</p>
+                      <div className={`${userLoading?"block":"hidden"} w-[260px] h-8 rounded bg-[#ab5a5a] pskeleton`}></div>
+                      <p className={`${userLoading?"hidden":"block"} text-[24px] text-[#E1CA6D]`}>{cygnusId}</p>
                     </div>
                     <div className="w-full h-auto flex flex-col justify-start items-start gap-1">
                       <p className="font-semibold text-[19px] text-white">Contact Number:</p>
-                      <p className="text-[24px] text-[#E1CA6D]">{phone}</p>
+                      <div className={`${userLoading?"block":"hidden"} w-[260px] h-8 rounded bg-[#ab5a5a] pskeleton`}></div>
+                      <p className={`${userLoading?"hidden":"block"} text-[24px] text-[#E1CA6D]`}>{phone}</p>
                     </div>
                     <div className="w-full h-auto flex flex-col justify-start items-start gap-1">
-                    <p className="font-semibold text-[19px] text-white">Email Address:</p>
-                    <p className="text-[24px] font-serif text-[#E1CA6D]">{email}</p>
-                  </div>
+                      <p className="font-semibold text-[19px] text-white">Email Address:</p>
+                      <div className={`${userLoading?"block":"hidden"} w-[260px] h-8 rounded bg-[#ab5a5a] pskeleton`}></div>
+                      <p className={`${userLoading?"hidden":"block"} text-[24px] text-[#E1CA6D]`}>{email}</p>
+                    </div>
                   </div>
               <div className="w-full h-auto flex flex-col justify-start items-start gap-10">
                 <button className="mt-4 border-2 border-white text-white rounded-lg hover:bg-yellow-700 text-base bg-[#890304] font-serif">

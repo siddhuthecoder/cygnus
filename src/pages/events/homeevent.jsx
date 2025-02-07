@@ -57,9 +57,9 @@ function HomeEvents(){
                     <div className={`${loading?"hidden":"block"} w-full h-auto`}>
                       <div className="w-full h-auto flex flex-col justify-center items-center py-8 gap-16">
                           <div className="w-full h-auto flex flex-col md:flex-row justify-around items-center gap-20 md:gap-0 px-24 py-4">
-                            {events.onTimeEvent && (
+                            {events?.onTimeEvent && (
                                 <Eventcard
-                                  event={events.onTimeEvent}
+                                  event={events?.onTimeEvent}
                                   onClick={() =>
                                     navigate(`${routesconfig.events}`, {
                                       state: { from: location },

@@ -81,11 +81,16 @@ const Homecontact = () => {
         <div className="hidden lg:flex w-full h-auto flex-col justify-center items-center">
           <div> <img src={border} alt="" /></div>
           <div className="w-auto h-full  rounded-md">
-            <img
-              src={map} // Replace with your map image path
-              alt="Map"
-              className=" h-[400px] object-contain mx-auto rounded-md"
-            />
+              <iframe
+                  className='sm:w-[360px] sm:h-[280px] md:w-[540px] md:h-[440px] rounded-lg'
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4369.8004507121705!2d80.81784986687269!3d16.791002772264342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3675e53fa3b4fb%3A0xfd1e193c90e4643!2sRajiv%20Gandhi%20University%20of%20Knowledge%20and%20Technology%20%2C%20Nuzvid!5e0!3m2!1sen!2sin!4v1738920738074!5m2!1sen!2sin"
+                  width="600"
+                  height="450"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  
+                ></iframe>
           </div>
           <div>
             <img src={border2} alt="" />
