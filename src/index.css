@@ -177,32 +177,32 @@ button:focus-visible {
   transform: rotateX(-180deg);
 }
 .moveleft{
-  animation: leftmov 1200s linear infinite,wiggle 6s ease-in-out infinite;
+  animation: leftmov 500s linear infinite,wiggle 4s ease-in-out infinite;
 }
 .movert{
-  animation: rtmov 1200s linear infinite,wiggle 6s ease-in-out infinite;
+  animation: rtmov 500s linear infinite,wiggle 4s ease-in-out infinite;
 }
 .moveleft2{
-  animation: leftmov2 1200s linear infinite,wiggle 6s ease-in-out infinite;
+  animation: leftmov2 800s linear infinite,wiggle 4s ease-in-out infinite;
 }
 .movert2{
-  animation: rtmov2 1200s linear infinite,wiggle 6s ease-in-out infinite;
+  animation: rtmov2 800s linear infinite,wiggle 4s ease-in-out infinite;
 }
 
 .moveleftdelay1{
-    animation: moveleftwithdelay 900s linear 0s infinite,wiggle 6s ease-in-out infinite;
+    animation: moveleftwithdelay 500s linear 0s infinite,wiggle 5s ease-in-out infinite;
 }
 .moveleftdelay2{
-  animation: moveleftwithdelay 900s linear 160s infinite,wiggle 6s ease-in-out infinite;
+  animation: moveleftwithdelay 500s linear 80s infinite,wiggle 5s ease-in-out infinite;
 }
 .moveleftdelay3{
-  animation: moveleftwithdelay 900s linear 320s infinite,wiggle 6s ease-in-out infinite;
+  animation: moveleftwithdelay 500s linear 160s infinite,wiggle 5s ease-in-out infinite;
 }
 .moveleftdelay4{
-  animation: moveleftwithdelay 900s linear 480s infinite,wiggle 6s ease-in-out infinite;
+  animation: moveleftwithdelay 500s linear 240s infinite,wiggle 5s ease-in-out infinite;
 }
 .slowmove{
-  animation: slowmov 3000s linear infinite
+  animation: slowmov 1200s linear infinite
 }
 .innershadow{
   box-shadow: inset 0px 10px 20px rgba(0, 0, 0, 0.25),inset 0px -10px 20px rgba(0, 0, 0, 0.25);
@@ -246,7 +246,7 @@ button:focus-visible {
 }
 @keyframes leftmov {
   0%{
-    right: 320px
+    right: 120px
   }
   100%{
     right:  1000px;
@@ -254,7 +254,7 @@ button:focus-visible {
 }
 @keyframes rtmov {
   0%{
-    left: 320px;
+    left: 120px;
   }
   100%{
     left:1000px;
@@ -263,7 +263,7 @@ button:focus-visible {
 }
 @keyframes leftmov2 {
   0%{
-    right: 160px
+    right: -80px
   }
   100%{
     right:  840px;
@@ -271,7 +271,7 @@ button:focus-visible {
 }
 @keyframes rtmov2 {
   0%{
-    left: 160px;
+    left: -80px;
   }
   100%{
     left: 840px;

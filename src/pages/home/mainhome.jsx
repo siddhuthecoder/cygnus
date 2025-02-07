@@ -34,10 +34,10 @@ export default function Home(){
                             </p>
                         </div>
                         <div className="z-50 absolute hidden md:block bottom-0 w-full h-auto">
-                            <img className="absolute bottom-0 h-56 left-80  object-contain origin-bottom movert" src={miniart1}/>
-                            <img className="absolute bottom-0 h-56 right-80 object-contain origin-bottom moveleft" src={miniart2}/>
-                            <img className="absolute bottom-0 h-56 left-40 object-contain origin-bottom movert2" src={miniart3}/>
-                            <img className="absolute bottom-0 h-56 right-40 object-contain origin-bottom moveleft2" src={miniart4}/>
+                            <img className="absolute bottom-0 h-56 left-64  object-contain origin-bottom movert" src={miniart1}/>
+                            <img className="absolute bottom-0 h-56 right-64 object-contain origin-bottom moveleft" src={miniart2}/>
+                            <img className="absolute bottom-0 h-56 -left-16 object-contain origin-bottom movert2" src={miniart3}/>
+                            <img className="absolute bottom-0 h-56 -right-16 object-contain origin-bottom moveleft2" src={miniart4}/>
                         </div>
                     </div>
                 </div>

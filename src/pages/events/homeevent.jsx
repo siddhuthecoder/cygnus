@@ -38,7 +38,7 @@ function HomeEvents(){
                 <div className="relative w-full grow flex flex-col justify-center items-center">
                     <img className="absolute -top-6 md:top-[7.5%] right-0 md:right-[2%] h-24 object-contain animate-spin-slow" src={rangoli} alt="rangoli"/>
                     <img className="absolute bottom-20 md:bottom-[10%] left-2 md:left-[2%] h-20 object-contain animate-spin-slow" src={rangoli} alt="rangoli"/>
-                    <div className="hidden md:block absolute bottom-0 w-full h-auto">
+                    <div className="z-[100] hidden md:block absolute bottom-0 w-full h-auto">
                         <img className="absolute bottom-0 -left-36 h-36 object-contain origin-bottom moveleftdelay1" src={eventminiart1} alt="eventminiart" />
                         <img className="absolute bottom-0 -left-36 h-36 object-contain origin-bottom moveleftdelay2" src={eventminiart2} alt="eventminiart" />
                         <img className="absolute bottom-0 -left-36 h-36 object-contain origin-bottom moveleftdelay3" src={eventminiart3} alt="eventminiart" />

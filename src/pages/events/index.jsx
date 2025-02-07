@@ -89,8 +89,7 @@ function EventPage(){
                                         </div>
                                         <div className="w-full h-auto flex flex-row justify-start items-center">
                                             <p className="w-auto h-auto font-serif font-normal text-left text-xl text-cygnus-black">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                            </p>
+                                            Register now to participate in your favorite sports! Sign up to join tournaments, track your progress, and connect with fellow athletes. Don't miss your chance to compete and showcase your skills—register today!                                         </p>
                                         </div>
                                     </div>
                                     <div className="w-full md:w-auto h-full flex flex-col justify-center items-start md:items-end">
