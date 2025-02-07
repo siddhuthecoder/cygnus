@@ -14,7 +14,7 @@ const Theme = () => {
         <div className='order-1 md:order-2'>
           <div className='moreabout-border  about-border-box '>
             <div className='w-[240px] h-[160px] md:w-[360px] md:h-[240px] '>
-                <img className="w-full h-full object-cover " alt="image" src={"https://th-i.thgim.com/public/todays-paper/tp-miscellaneous/tp-others/2nukpi/article68060330.ece/alternates/FREE_1200/Kuchipudi_-A-TaGBKCLO42V.3.jpg.jpg"} />
+                <img className="w-full h-full object-cover " alt="image" src={"https://res.cloudinary.com/db552uxtr/image/upload/v1738910573/about_4_dnvgbu.jpg"} />
             </div>
         </div>
         </div>
