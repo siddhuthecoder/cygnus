@@ -6,8 +6,20 @@ import { FaXTwitter } from "react-icons/fa6";
 import {Facebook,Instagram,Linkedin,Youtube,MessageCircleCode} from 'lucide-react';
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt} from 'react-icons/fa';
 import Pagelayout from '../../components/layout/pagelayout';
+import toast from 'react-hot-toast';
+import React,{useState,useEffect} from 'react';
 
 const Homecontact = () => {
+  const [message, setMessage] = useState("");
+  const handleSendMessage = () => {
+    if (message.trim() === "") {
+      toast.error("Message cannot be empty!");
+      return;
+    }
+    toast.success("Thanks for your feedback");
+    setMessage("");
+  };
+
   return (
     <Pagelayout className={"min-h-full md:min-h-screen"} title="Contact Us">
       <div className="w-full h-auto flex flex-col justify-center items-center py-8 md:py-12 lg:py-16 px-6 md:px-16 lg:px-28">  
@@ -71,8 +83,11 @@ const Homecontact = () => {
               type="text"
               placeholder="Leave a Message"
               className="w-3/4 px-4 py-2 rounded-lg focus:outline-none bg-white"
+              onChange={(e) => setMessage(e.target.value)}
             />
-            <button className="bg-gradient-to-r from-[#002263] via-[#035B9B] to-[#002263] text-white px-6 py-2 w-[120px] rounded-sm hover:bg-[#d9b55b]">
+            <button 
+            onClick={handleSendMessage}
+            className="bg-gradient-to-r from-[#002263] via-[#035B9B] to-[#002263] text-white px-6 py-2 w-[120px] rounded-sm hover:bg-[#d9b55b]">
               Send
             </button>
           </div>

@@ -141,7 +141,7 @@ const Event = () => {
           </div>
           <div className=" text-white mt-4 p-2 text-center rounded-lg">
             <h3 className="text-xl font-bold">Event Starts In:</h3>
-            <p className="text-3xl text-[#E1CA6D] font-bold">{timeLeft}</p>
+            {/* <p className="text-3xl text-[#E1CA6D] font-bold">{timeLeft}</p> */}
           </div>
         </div>
         {/* Right Section: Details */}
@@ -368,8 +368,11 @@ const Event = () => {
                       const timeSlot =` ${startTimeFormatted} - ${endTimeFormatted}`;
 
                       return (
+                        
                         <li key={index}>
-                          {`Round ${item.roundNumber} - ${formattedDate}, ${timeSlot} | ${item.venue}`}
+                          {`Round ${item.roundNumber}:To be Announced Soon`}
+                          {/* {`Round ${item.roundNumber} - ${formattedDate}, ${timeSlot} | ${item.venue}`} */}
+                       
                         </li>
                       );
                     })}
