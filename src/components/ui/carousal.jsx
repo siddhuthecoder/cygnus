@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { cn } from "../../utils";
+import { animate } from "motion";
 export default function Carousel({data_array,children,childComp:ChildComp,className}){
     function SampleNextArrow(props) {
         const { className, style, onClick } = props;
@@ -119,8 +120,8 @@ export function CarouselwithTwoItems ({data_array,children,childComp:ChildComp,c
       slidesToShow: 4,
       slidesToScroll: 1,
       autoplay: true,
-      speed: 600,
-      autoplaySpeed: 1200,
+      speed: 1000,
+      autoplaySpeed: 2000,
       cssEase: "linear",
       pauseOnHover: true,
       responsive: [
