@@ -2,7 +2,6 @@ import React from "react";
 import bgrangoli from "/images/bgrangoli.png";
 
 export default function Loading(){
-    console.log("loadding");
     return(
         <div className="w-screen h-screen flex flex-col justify-center items-center bg-authbg bg-contain bg-repeat bg-[#890304]">
             <div className="relative w-auto h-auto flex flex-col justify-center items-center">

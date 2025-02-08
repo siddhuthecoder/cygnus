@@ -82,7 +82,7 @@ const Homecontact = () => {
             <input
               type="text"
               placeholder="Leave a Message"
-              className="w-3/4 px-4 py-2 rounded-lg focus:outline-none bg-white"
+              className="w-3/4 px-4 py-2 rounded-lg focus:outline-none bg-white font-sans font-semibold text-xl text-slate-800"
               onChange={(e) => setMessage(e.target.value)}
             />
             <button 

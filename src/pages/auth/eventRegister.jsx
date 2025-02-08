@@ -33,7 +33,6 @@ export default function EventRegister({className, loggedInUser, eventType, maxPa
 
   useEffect(() =>{
     console.log("Updated teamMembers array:", formdata.teamMembers);
-    
   }, [formdata.teamMembers]);
 
   const handleTeamMemberChange = (index, value) => {

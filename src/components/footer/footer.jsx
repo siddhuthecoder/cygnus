@@ -55,7 +55,7 @@ const Footer = () => {
         <div className="font-serif flex flex-col justify-start items-start md:items-center">
           <h3 className="text-2xl font-semibold text-[#022E6E]">Contact</h3>
           <p className="w-full h-auto text-start md:text-center text-[#000000] mt-2 text-xl">
-            R.No. FF -63, I3 Block, <br />
+            R.No. FF-63, I3 Block, <br />
             RGUKT Nuzvid, <br />
             Andhra Pradesh, 521202.
           </p>

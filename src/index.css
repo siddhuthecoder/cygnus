@@ -211,12 +211,12 @@ button:focus-visible {
 .animatonpath1{
     stroke-dasharray: 800; /* Length of the path */
     stroke-dashoffset: 800; /* Initially hide the path */
-    animation: draw 3s ease-in-out backwards; /* Animate the path over 4 seconds */
+    animation: draw 3s ease-in-out infinite; /* Animate the path over 4 seconds */
 }
 .animatonpath2{
   stroke-dasharray: 800; /* Length of the path */
   stroke-dashoffset: 800; /* Initially hide the path */
-  animation: draw 3s ease-in-out backwards 1s; /* Animate the path over 4 seconds */
+  animation: draw 3s ease-in-out infinite 1s; /* Animate the path over 4 seconds */
 }
 @keyframes draw {
   to {

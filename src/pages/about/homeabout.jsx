@@ -3,8 +3,6 @@ import Pagelayout from "../../components/layout/pagelayout";
 import miniart5 from "/images/miniart5.png";
 import { useNavigate,useLocation } from "react-router-dom";
 import routesconfig from "../../configs/routesconfig";
-
-
 function HomeAbout(){
     const navigate = useNavigate();
     const location = useLocation();
@@ -17,7 +15,7 @@ function HomeAbout(){
                         Cygnus - The Legacy Continues
                     </p>
                     <p className="w-full h-auto font-serif font-normal text-start text-balance text-base md:text-2xl text-white">
-                        The cultural annual fest of RGUKT Nuzvid returns after five long years. Focusing on "Reviving Timeless Traditions", celebrating our rich cultural heritage while blending it with modern creativity. Get ready to immerse yourself in the beauty of our ancient traditions and cultures, reimagined for today's world.
+                        The cultural annual fest of RGUKT Nuzvid returns after five long years. Focusing on "Reviving The Timeless Traditions", celebrating our rich cultural heritage while blending it with modern creativity. Get ready to immerse yourself in the beauty of our ancient traditions and cultures, reimagined for today's world.
                     </p>
                     <button onClick={()=>{navigate(routesconfig.about,{state:{from:location}})}} className="w-auto h-auto px-4 py-2 rounded-[4px] flex flex-row justify-center items-center gap-2 bg-[#FBF6E0]">
                         <p className="w-auto h-auto text-base text-center text-[#012D6E]">See More</p>
