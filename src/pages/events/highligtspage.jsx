@@ -8,6 +8,7 @@ import eventimage from '/images/eventimage.png';
 import { useParams } from "react-router-dom";
 import axiosInstance from "../../api/axiosInstance";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 function HighlightsPage({event}){
     const {id}=useParams();
@@ -17,6 +18,7 @@ function HighlightsPage({event}){
     const [description,setDescription]=useState("");
     const [hint,setHint]=useState("");
     const [image,setImage]=useState();
+    const navigate=useNavigate();
     useEffect(()=>{
           window.scrollTo(0,0);
         //   console.log(id);
@@ -58,8 +60,16 @@ function HighlightsPage({event}){
     
             toast.success("Answer submitted successfully!");
         } catch (error) {
+           
+            if(error.status==403){
+                localStorage.removeItem("cygnusId");
+                  localStorage.removeItem("token");
+                  localStorage.removeItem("name");
+                  localStorage.removeItem("collegId");
+                  navigate('/login');
+              }
             console.error("Error:", error.response ? error.response.data : error.message);
-            toast.error(error.message);
+            // toast.error(error.message);
         }
         
     }
