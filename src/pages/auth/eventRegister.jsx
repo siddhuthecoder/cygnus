@@ -60,7 +60,7 @@ export default function EventRegister({className, loggedInUser, eventType, maxPa
     const payload = {
       cygnusIds: cygnusIds.filter(id => id !== "") // Filter out empty IDs
     };
-    
+    console.log(payload);
     try {
       const response = await axiosInstance.post(
         `api/events/${id}/register`,  

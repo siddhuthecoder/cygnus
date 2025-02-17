@@ -106,9 +106,13 @@ export default function SigninForm() {
         </div>
 
         <div className="w-full h-auto flex flex-row justify-end items-center">
-          <p onClick={()=>{navigate("/forgot-password",{state:{from:location}})}} className="w-auto h-auto text-cygnus-white text-base font-Young font-normal text-end hover:cursor-pointer hover:text-cy-secondary-bg">
-            Forgot password?
-          </p>
+        <p 
+  onClick={() => { navigate("/forgot-password", { state: { from: location } }) }} 
+  className="w-auto h-auto text-lg font-normal text-[#d9b55b] text-end hover:cursor-pointer hover:text-blue-500">
+    Forgot password?
+</p>
+
+
         </div>
 
         <div className="flex justify-center">
@@ -119,7 +123,7 @@ export default function SigninForm() {
 
         <div className="w-full h-auto flex flex-row justify-center items-center">
           <p className="w-auto h-auto text-base font-Young font-normal text-center text-white">
-            Don't have an Account? <Link to={"/register"}><span className="hover:cursor-pointer text-white hover:text-blue-600">Signup</span></Link>
+            Don't have an Account? <Link to={"/register"}><span className="hover:cursor-pointer text-[#d9b55b] hover:text-blue-600">Signup</span></Link>
           </p>
         </div>
       </form>
