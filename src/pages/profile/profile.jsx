@@ -145,8 +145,8 @@ const ProfilePage = () => {
                     LogOut
                 </button>
           </div>
-          `   </div>
-              
+             </div>
+        
             </div>
         </ResTitlePagelayout>
         <img className="w-full bg-cover" src={bottombg}/>
