@@ -23,7 +23,7 @@ function RegisterPage({ title }) {
                             <Register />
                           </div>
                           <div className="order-1 md:order-2 w-auto h-auto flex flex-col justify-start items-center pt-0 md:pt-14 gap-6">
-                              <div className="w-[95%] h-auto flex flex-col items-center ">
+                              <div className="w-[96%] h-auto flex flex-col items-center ">
                                   <div className="w-full h-[400px]">
                                     <div className=" relative w-full h-full flex flex-col justify-center items-center p-10">
                                         <img className="w-full h-full  z-40" src={"https://res.cloudinary.com/db552uxtr/image/upload/v1738904330/register_csvq0g.webp"} alt={"eventimage"}/>
@@ -35,7 +35,7 @@ function RegisterPage({ title }) {
                               </div>
                               <div className="flex flex-col justify-center items-center">
                                   <div >
-                                      <p className="font-serif text-[19px]">Cygnus</p>
+                                      <p className="font-serif text-[19px] text-white">Cygnus</p>
                                   </div>
                                   <div> 
                                       <p className="text-[22px] font-serif w-64 text-center text-[#E1CA6D]"> The Legacy Continues</p>
