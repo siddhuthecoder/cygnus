@@ -89,12 +89,12 @@ function EventPage(){
                                         </div>
                                         <div className="w-full h-auto flex flex-row justify-start items-center">
                                             <p className="w-auto h-auto font-serif font-normal text-left text-xl text-cygnus-black">
-                                            Register now to participate in your favorite sports! Sign up to join tournaments, track your progress, and connect with fellow athletes. Don't miss your chance to compete and showcase your skills—register today!                                         </p>
+                                            Join the excitement and take part in your favorite sports! Compete in thrilling tournaments, showcase your skills, and experience the spirit of the game. Step onto the field, challenge your limits, and be part of the action                     </p>
                                         </div>
                                     </div>
                                     <div className="w-full md:w-auto h-full flex flex-col justify-center items-start md:items-end">
                                         <button    onClick={() => navigate("/sports", { state: { from: location } })}className="w-auto h-auto px-6 py-[10px] rounded-[4px] bg-cy-primary-text font-serif font-semibold text-center text-cygnus-white">
-                                            REGISTER NOW 
+                                            See More
                                         </button>
                                     </div>
                                 </div>
