@@ -127,7 +127,7 @@ Hit hard, play smart and conquer the court!
       <div>
         <h3 className="text-xl font-bold text-[#E1CA6D]">Venue</h3>
         <p className="mt-2 font-semibold text-base text-white">
-          Grand Hall, Innovation Center, New York City
+        SAC shuttle cour
         </p>
       </div>
 
@@ -135,7 +135,7 @@ Hit hard, play smart and conquer the court!
       <div>
         <h3 className="text-xl font-bold text-[#E1CA6D]">Contact</h3>
         <p className="mt-2 font-semibold text-base text-white">
-        Phone : +91 7075883859<br />
+        Phone : +91 9704696008<br />
   
         </p>
       </div>
@@ -177,7 +177,7 @@ Hit hard, play smart and conquer the court!
       <div>
         <h3 className="text-xl font-bold text-[#E1CA6D]">Venue</h3>
         <p className="mt-2 font-semibold text-base text-white">
-          Grand Hall, Innovation Center, New York City
+          {"Faculty ground (beside P3 block)"}
         </p>
       </div>
 
@@ -185,7 +185,7 @@ Hit hard, play smart and conquer the court!
       <div>
         <h3 className="text-xl font-bold text-[#E1CA6D]">Contact</h3>
         <p className="mt-2 font-semibold text-base text-white">
-        Phone : +91 7075883859<br />
+        Phone : +91 9704696008<br />
   
         </p>
       </div>
@@ -223,7 +223,7 @@ Hit hard, play smart and conquer the court!
       <div>
         <h3 className="text-xl font-bold text-[#E1CA6D]">Venue</h3>
         <p className="mt-2 font-semibold text-base text-white">
-          Grand Hall, Innovation Center, New York City
+          {"Faculty ground (beside P3 block)"}
         </p>
       </div>
 
@@ -231,7 +231,7 @@ Hit hard, play smart and conquer the court!
       <div>
         <h3 className="text-xl font-bold text-[#E1CA6D]">Contact</h3>
         <p className="mt-2 font-semibold text-base text-white">
-        Phone : +91 7075883859<br />
+        Phone : +91 9704696008<br />
   
         </p>
       </div>
@@ -269,7 +269,7 @@ Hit hard, play smart and conquer the court!
       <div>
         <h3 className="text-xl font-bold text-[#E1CA6D]">Venue</h3>
         <p className="mt-2 font-semibold text-base text-white">
-          Grand Hall, Innovation Center, New York City
+        K2 ground 
         </p>
       </div>
 
@@ -277,7 +277,7 @@ Hit hard, play smart and conquer the court!
       <div>
         <h3 className="text-xl font-bold text-[#E1CA6D]">Contact</h3>
         <p className="mt-2 font-semibold text-base text-white">
-        Phone : +91 7075883859<br />
+        Phone : +91 9704696008<br />
   
         </p>
       </div>
@@ -317,7 +317,7 @@ Hit hard, play smart and conquer the court!
       <div>
         <h3 className="text-xl font-bold text-[#E1CA6D]">Venue</h3>
         <p className="mt-2 font-semibold text-base text-white">
-          Grand Hall, Innovation Center, New York City
+        K2 ground 
         </p>
       </div>
 
@@ -325,7 +325,7 @@ Hit hard, play smart and conquer the court!
       <div>
         <h3 className="text-xl font-bold text-[#E1CA6D]">Contact</h3>
         <p className="mt-2 font-semibold text-base text-white">
-        Phone : +91 7075883859<br />
+        Phone : +91 9704696008<br />
   
         </p>
       </div>
@@ -364,7 +364,7 @@ Hit hard, play smart and conquer the court!
       <div>
         <h3 className="text-xl font-bold text-[#E1CA6D]">Venue</h3>
         <p className="mt-2 font-semibold text-base text-white">
-          Grand Hall, Innovation Center, New York City
+          {"Faculty ground (beside P3 block)"}
         </p>
       </div>
 
@@ -372,7 +372,7 @@ Hit hard, play smart and conquer the court!
       <div>
         <h3 className="text-xl font-bold text-[#E1CA6D]">Contact</h3>
         <p className="mt-2 font-semibold text-base text-white">
-        Phone : +91 7075883859<br />
+        Phone : +91 9704696008<br />
   
         </p>
       </div>
@@ -410,7 +410,7 @@ Hit hard, play smart and conquer the court!
       <div>
         <h3 className="text-xl font-bold text-[#E1CA6D]">Venue</h3>
         <p className="mt-2 font-semibold text-base text-white">
-          Grand Hall, Innovation Center, New York City
+          {"Faculty ground (beside P3 block)"}
         </p>
       </div>
 
@@ -418,7 +418,7 @@ Hit hard, play smart and conquer the court!
       <div>
         <h3 className="text-xl font-bold text-[#E1CA6D]">Contact</h3>
         <p className="mt-2 font-semibold text-base text-white">
-        Phone : +91 7075883859<br />
+        Phone : +91 9704696008<br />
   
         </p>
       </div>
