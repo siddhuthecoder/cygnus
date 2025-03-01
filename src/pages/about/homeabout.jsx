@@ -36,13 +36,13 @@ function HomeAbout(){
                             <img className="w-full h-full object-cover rounded-md" alt="image" src={"https://res.cloudinary.com/dmifvdj2r/image/upload/v1740666243/11_qmtcup.jpg"} />
                             </div>
                             <div className="col-span-7 row-span-5 rounded-md">
-                                <img className="w-full h-full object-cover rounded-md " alt="image" src={"https://res.cloudinary.com/db552uxtr/image/upload/v1738871180/about2_jxzxkt.jpg"} />
+                                <img className="w-full h-full object-cover rounded-md " alt="image" src={"https://res.cloudinary.com/dmifvdj2r/image/upload/v1740807888/19_rbd0cm.jpg"} />
                             </div>
                             <div className="col-span-5 row-span-5 rounded-md">
-                            <img className="w-full h-full object-cover rounded-md" alt="image" src={"https://res.cloudinary.com/db552uxtr/image/upload/v1738909959/about_2_tkntt3.jpg"} />
+                            <img className="w-full h-full object-cover rounded-md" alt="image" src={"https://res.cloudinary.com/dmifvdj2r/image/upload/v1740807889/21_xjyssr.jpg"} />
                             </div>
                             <div className="col-span-5 row-span-7 rounded-md">
-                            <img className="w-full h-full object-cover rounded-md object-center" alt="image" src={"https://res.cloudinary.com/db552uxtr/image/upload/v1738788967/IMG-20250206-WA0007_kdweyp.jpg"} />
+                            <img className="w-full h-full object-cover rounded-md object-center" alt="image" src={"https://res.cloudinary.com/dmifvdj2r/image/upload/v1740666983/13_ckh0xf.png"} />
                             </div>
                         </div>
                     </div>

@@ -26,7 +26,7 @@ function RegisterPage({ title }) {
                               <div className="w-[96%] h-auto flex flex-col items-center ">
                                   <div className="w-full h-[400px]">
                                     <div className=" relative w-full h-full flex flex-col justify-center items-center p-10">
-                                        <img className="w-full h-full  z-40" src={"https://res.cloudinary.com/db552uxtr/image/upload/v1738904330/register_csvq0g.webp"} alt={"eventimage"}/>
+                                        <img className="w-full h-full  z-40" src={"https://res.cloudinary.com/dmifvdj2r/image/upload/v1740808995/register_qgyau3.webp"} alt={"eventimage"}/>
                                         <div className="absolute inset-0 flex flex-col justify-end items-start gap-[2px] event-border-two overflow-hidden z-50">
                                           
                                         </div>
