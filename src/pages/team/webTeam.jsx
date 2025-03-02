@@ -9,14 +9,14 @@ import BorderBg from "../../components/ui/borderbg";
 import { CarouselwithTwoItems } from "../../components/ui/carousal";
 import { CoreTeamCardCarouleItem } from "../../components/ui/carouselitm";
 const sponsors = [
-  { id: 1, name: "Gangadhar Munuri", role: "Full Stack Developer" ,imageUrl:"https://res.cloudinary.com/db552uxtr/image/upload/v1738790144/gangadhar_lmgn0x.jpg"},
-  { id: 2, name: "Arun Kumar", role: "Backend Developer",imageUrl:"https://res.cloudinary.com/db552uxtr/image/upload/v1738791435/IMG_20250206_030246_l5dm4v.jpg" },
-  { id: 3, name: "Surya Vamsi", role: "Frontend Developer",imageUrl:"https://res.cloudinary.com/db552uxtr/image/upload/v1738792871/WhatsApp_Image_2025-02-06_at_03.32.41_c7783af6_x5rcpk.jpg"},
-  { id: 4, name: "Rupak Choppala", role: "Full Stack Developer",imageUrl:"https://res.cloudinary.com/db552uxtr/image/upload/v1738789518/rupak_ojx9cn.jpg" },
+  { id: 1, name: "Gangadhar Munuri", role: "Full Stack Developer" ,imageUrl:"https://res.cloudinary.com/dmifvdj2r/image/upload/v1740893423/ganga_xogidz.jpg"},
+  { id: 2, name: "Arun Kumar", role: "Backend Developer",imageUrl:"https://res.cloudinary.com/dxezbktvq/image/upload/v1740829398/IMG_20241129_223926_cr55zj.jpg" },
+  { id: 3, name: "Surya Vamsi", role: "Frontend Developer",imageUrl:"https://res.cloudinary.com/dxezbktvq/image/upload/v1740829473/surya_h3p0fz.jpg"},
+  { id: 4, name: "Rupak Choppala", role: "Full Stack Developer",imageUrl:"https://res.cloudinary.com/dxezbktvq/image/upload/v1740827312/rupak_mmeui4.jpg" },
   { id: 4, name: "Shaik Muzamil", role: "UI/UX Designer",imageUrl:"https://res.cloudinary.com/dru7btk92/image/upload/v1738903094/muzmail_sjmzof.png" },
   { id: 5, name: "Ranjith", role: "Frontend Developer",imageUrl:"https://res.cloudinary.com/dru7btk92/image/upload/v1738870385/ranjith_hg0kzr.jpg"},
   { id: 6, name: "ManiKanta", role:"Frontend Developer",imageUrl:"https://res.cloudinary.com/dru7btk92/image/upload/v1738870576/manikanta_mcahxe.jpg" },
-  { id: 7, name: "Karthik", role: "Frontend Developer",imageUrl:"https://res.cloudinary.com/db552uxtr/image/upload/v1738904691/karthik_t4rz0v.jpg"},
+  { id: 7, name: "Karthik", role: "Frontend Developer",imageUrl:"https://res.cloudinary.com/dmifvdj2r/image/upload/v1740893767/k_l4kc3y.jpg"},
 ];
 function WebTeam(){
     return(
