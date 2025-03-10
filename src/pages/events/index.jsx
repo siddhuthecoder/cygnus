@@ -44,19 +44,19 @@ function EventPage(){
         fetchEvents();
        
     },[]);
-    // useEffect(()=>{
-    //     const fetchEvents=async()=>{
-    //          try{
-    //             const response= await axiosInstance.get("/api/events/ontimeevents");
-    //             setOntimeEvents(response.data.events);
-    //          }catch(error){
-    //             console.error("Error fetching events:", error);
-    //          }
-    //          setOLoading(false);
-    //     }
-    //     fetchEvents();
+    useEffect(()=>{
+        const fetchEvents=async()=>{
+             try{
+                const response= await axiosInstance.get("/api/events/ontimeevents");
+                setOntimeEvents(response.data.events);
+             }catch(error){
+                console.error("Error fetching events:", error);
+             }
+             setOLoading(false);
+        }
+        fetchEvents();
        
-    // },[]);
+    },[]);
     useEffect(()=>{
         const fetchEvents=async()=>{
              try{
@@ -136,11 +136,41 @@ function EventPage(){
                             )}
                           </div>
                         </Pagelayout>
+
                         <img className="w-full bg-cover hidden md:block" src={bottombg}/>
                         <BorderBg className={" block md:hidden h-9 bg-cover bg-bottom-border-bg"}/>
-                        <ResTitlePagelayout widthtitle={"w-[260px] md:w-[400px]"} className={"min-h-full md:min-h-screen"} title={"On Time Events"} posTiltle={"pt-4"} >
-                          <div className={`w-full grow flex flex-col justify-center items-center`}>
-                            <ComingSoon/>
+                        <ResTitlePagelayout widthtitle={"w-[260px] md:w-[400px]"} className={"min-h-full md:h-auto"} title={"On Time Events"} posTiltle={"pt-4"} >
+                          <div className={`${oloading?"flex":"hidden"} w-full h-auto flex-row flex-wrap justify-center items-center gap-16 px-16 py-16`}>
+                                <div className="w-full h-auto hidden md:flex flex-row flex-wrap justify-center items-center gap-16">
+                                  <EventCardSkeleton/>
+                                  <EventCardSkeleton/>
+                                  <EventCardSkeleton/>
+                                  <EventCardSkeleton/>
+                                  <EventCardSkeleton/>
+                                  <EventCardSkeleton/>
+                                </div>
+                                <div className="w-full h-auto flex md:hidden flex-row flex-wrap justify-center items-center gap-16">
+                                  <EventCardSkeleton/>
+                                </div>
+                          </div>
+                          <div className={`${oloading?"hidden":"block"} w-full h-auto`}>
+                              {ontimevents.length > 0 && (
+                                  <div className="w-full grow hidden md:flex flex-row flex-wrap justify-evenly gap-y-36 items-center p-4 sm:px-8 md:px-16 lg:px-24 py-24">
+                                    {ontimevents.map((event, index) => (
+                                      <div key={event._id} className="w-full lg:w-1/2 xl:w-1/3 h-auto flex flex-col justify-center items-center gap-0">
+                                        <Eventcard 
+                                          event={event} 
+                                          onClick={() => navigate(`${routesconfig.events}/${event._id}`, { state: { from: location } })}
+                                        />
+                                      </div>
+                                    ))}
+                                  </div>
+                              )}
+                              {ontimevents.length > 0 && (
+                                <div className="w-full h-auto flex md:hidden flex-col justify-center items-center pb-16">
+                                  <Carousel data_array={ontimevents} childComp={EventCardCarouleItem} />
+                                </div>
+                              )}
                           </div>
                         </ResTitlePagelayout>
                         <img className="w-full bg-cover hidden md:block" src={bottombg}/>
