@@ -26,7 +26,7 @@ export default function Home(){
                         <img className="absolute bottom-1/4 left-[5%] h-24 object-contain animate-spin-slow" src={rangoli}/>
                         <div className="relative  w-full md:w-8/12 h-[50vh]  md:h-[62.5vh]">
                             <div className="absolute w-full h-full video-border z-40"></div>
-                            <video className="absolute w-full h-full object-cover z-30  " src={"https://res.cloudinary.com/dxqkg7obm/video/upload/v1738333922/homebgvideo_fvr5lx.mp4"} muted loop autoPlay>
+                            <video className="absolute w-full h-full object-cover z-30  " src={"https://res.cloudinary.com/dmifvdj2r/video/upload/v1741610055/homebgvideo_qqxy9k.mp4"} muted loop autoPlay>
                                 {/* <source src="https://www.instagram.com/reel/DFVGKgmSZTk/?igsh=MWRoczR0aHdzcjQ5MA==" type="video/mp4"/> */}
                             </video>
                             <p className="hidden md:block absolute bottom-10 w-full h-auto px-24 py-2 font-serif font-light text-base text-center text-[#F8F2BF] z-40 ">
