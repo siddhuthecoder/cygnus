@@ -92,6 +92,7 @@ import { lazy, Suspense } from "react";
 import Loading from "../components/ui/loading";
 import PrivateRoute from "../components/privateroutes";
 import routesconfig from "../configs/routesconfig";
+import WinnersPage from "../pages/winners";
 
 
 // Lazy-loaded pages
@@ -190,6 +191,15 @@ export const mainRouter = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
+    path: routesconfig.winners,
+    element: (
+      <Suspense fallback={<Loading />}>
+        <WinnersPage />
+      </Suspense>
+    ),
+    errorElement: <ErrorPage />,
+  },
+  {
     path: routesconfig.events,
     element: (
       <Suspense fallback={<Loading />}>
@@ -198,15 +208,15 @@ export const mainRouter = createBrowserRouter([
     ),
     errorElement: <ErrorPage />,
   },
-  {
-    path: `${routesconfig.events}/:eventId`, // Dynamic route for event details
-    element: (
-      <Suspense fallback={<Loading />}>
-        <OneEvent />
-      </Suspense>
-    ),
-    errorElement: <ErrorPage />,
-  },
+  // {
+  //   path: `${routesconfig.events}/:eventId`, // Dynamic route for event details
+  //   element: (
+  //     <Suspense fallback={<Loading />}>
+  //       <OneEvent />
+  //     </Suspense>
+  //   ),
+  //   errorElement: <ErrorPage />,
+  // },
   {
     path: routesconfig.about,
     element: (

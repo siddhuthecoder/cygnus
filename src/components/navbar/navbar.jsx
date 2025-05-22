@@ -19,8 +19,8 @@ const Navbar = ({className}) => {
         link : routesconfig.about
        },
       {
-       name: "Events",
-       link : routesconfig.events
+       name: "Winners",
+       link : routesconfig.winners
       },
       {
         name: "Team",

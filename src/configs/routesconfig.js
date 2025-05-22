@@ -6,7 +6,8 @@ const routesconfig = {
     team : "/team",
     profile : "/profile",
     highlight : "/highlight",
-    forgot:"/forgot"
+    forgot:"/forgot",
+    winners:"/winners"
 }
 
 export default routesconfig;

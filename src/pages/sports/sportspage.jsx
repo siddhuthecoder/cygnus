@@ -105,7 +105,7 @@ const SportEvent = () => {
     <h3 className="text-xl font-bold text-[#E1CA6D]" >Badminton</h3>
       <FontAwesomeIcon
         icon={toggleIcon(isOverviewVisible)}
-    className="w-5 h-5 text-[#E1CA6D]"
+        className="w-5 h-5 text-[#E1CA6D]"
       />
     </div>
   </div>
