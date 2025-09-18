@@ -67,8 +67,8 @@ function HomeEvents(){
                                   }
                                 />
                             )}   
-                            {events.preEvents.map((event) => (
-                                <Eventcard
+                            {events.preEvents.map((event,id) => (
+                                <Eventcard key={id}
                                   event={event}
                                   onClick={() =>
                                     navigate(`${routesconfig.events}`, {
@@ -83,7 +83,7 @@ function HomeEvents(){
                                   <span className="w-auto h-auto font-serif font-normal text-center text-base text-[#012D6E]">See More</span>
                                   <div className="w-auto h-full flex flex-col justify-center items-center">
                                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <g clip-path="url(#clip0_686_822)">
+                                          <g clipPath="url(#clip0_686_822)">
                                               <path d="M2.5 8H13.5" stroke="#012D6E" stroke-width="1.94258" stroke-linecap="round" stroke-linejoin="round"/>
                                               <path d="M9 3.5L13.5 8L9 12.5" stroke="#012D6E" stroke-width="1.94258" stroke-linecap="round" stroke-linejoin="round"/>
                                           </g>

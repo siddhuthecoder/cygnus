@@ -1,16 +1,15 @@
-import React from "react";
+// import React from "react";
 import rangoli from "/images/bgrangoli.png";
 import miniart1 from "/images/miniart1.png";
 import miniart2 from "/images/miniart2.png";
 import miniart3 from "/images/miniart3.png";
 import miniart4 from "/images/miniart4.png";
-import bottombg from "/images/bottompattern.png";
+// import bottombg from "/images/bottompattern.png";
 //import components
-import MainLayout from "../../components/layout/MainLayout"
+// import MainLayout from "../../components/layout/MainLayout"
 import BorderBg from "../../components/ui/borderbg"
-import CygnusTitleCard from "../../components/ui/cygnustitlecard";
+// import CygnusTitleCard from "../../components/ui/cygnustitlecard";
 import CygnusTitleImgCard from "../../components/ui/cygnustitleimgcomp";
-import homebgvideo from "/video/homebgvideo.mp4"
 
 
 export default function Home(){
@@ -26,11 +25,11 @@ export default function Home(){
                         <img className="absolute bottom-1/4 left-[5%] h-24 object-contain animate-spin-slow" src={rangoli}/>
                         <div className="relative  w-full md:w-8/12 h-[50vh]  md:h-[62.5vh]">
                             <div className="absolute w-full h-full video-border z-40"></div>
-                            <video className="absolute w-full h-full object-cover z-30  " src={"https://res.cloudinary.com/dmifvdj2r/video/upload/v1741610055/homebgvideo_qqxy9k.mp4"} muted loop autoPlay>
-                                {/* <source src="https://www.instagram.com/reel/DFVGKgmSZTk/?igsh=MWRoczR0aHdzcjQ5MA==" type="video/mp4"/> */}
+                            <video className="absolute w-full h-full object-cover z-30  " src={"https://res.cloudinary.com/dnhkcqoci/video/upload/v1758174597/homebgvideo_rrmpzd.mp4"} muted loop autoPlay>
+                                <source src="https://www.instagram.com/reel/DFVGKgmSZTk/?igsh=MWRoczR0aHdzcjQ5MA==" type="video/mp4"/>
                             </video>
                             <p className="hidden md:block absolute bottom-10 w-full h-auto px-24 py-2 font-serif font-light text-base text-center text-[#F8F2BF] z-40 ">
-                            Step into a world where heritage meets creativity, bringing the essence of our cultural roots to life. Experience a fusion of past and present like never before! Immerse yourself in tradition, artistry and more.
+                                Step into a world where heritage meets creativity, bringing the essence of our cultural roots to life. Experience a fusion of past and present like never before! Immerse yourself in tradition, artistry and more.
                             </p>
                         </div>
                         <div className="z-50 absolute hidden md:block bottom-0 w-full h-auto">

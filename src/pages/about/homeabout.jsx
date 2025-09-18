@@ -1,4 +1,4 @@
-import React from "react";
+
 import Pagelayout from "../../components/layout/pagelayout";
 import miniart5 from "/images/miniart5.png";
 import { useNavigate,useLocation } from "react-router-dom";
@@ -21,9 +21,9 @@ function HomeAbout(){
                         <p className="w-auto h-auto text-base text-center text-[#012D6E]">See More</p>
                         <div className="w-auto h-full flex flex-col justify-center items-center">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_683_707)">
-                                    <path d="M2.5 8H13.5" stroke="#012D6E" stroke-width="1.94258" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M9 3.5L13.5 8L9 12.5" stroke="#012D6E" stroke-width="1.94258" stroke-linecap="round" stroke-linejoin="round"/>
+                                <g clipPath="url(#clip0_683_707)">
+                                    <path d="M2.5 8H13.5" stroke="#012D6E" strokeWidth="1.94258" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M9 3.5L13.5 8L9 12.5" stroke="#012D6E" strokeWidth="1.94258" strokeLinecap="round" strokeLinejoin="round"/>
                                 </g>
                             </svg>
                         </div>
@@ -33,16 +33,16 @@ function HomeAbout(){
                     <div className="w-full h-auto px-4 py-2 flex flex-col justify-center items-center about-border">
                         <div className="w-full h-[300px] md:h-[460px] p-2 grid grid-flow-col grid-cols-12 grid-rows-12 gap-2 ">
                             <div className="col-span-7 row-span-7  rounded-md">
-                            <img className="w-full h-full object-cover rounded-md" alt="image" src={"https://res.cloudinary.com/dmifvdj2r/image/upload/v1740666243/11_qmtcup.jpg"} />
+                                <img className="w-full h-full object-cover rounded-md" alt="image" src={"https://res.cloudinary.com/dmifvdj2r/image/upload/v1740666243/11_qmtcup.jpg"} />
                             </div>
                             <div className="col-span-7 row-span-5 rounded-md">
                                 <img className="w-full h-full object-cover rounded-md " alt="image" src={"https://res.cloudinary.com/dmifvdj2r/image/upload/v1740807888/19_rbd0cm.jpg"} />
                             </div>
                             <div className="col-span-5 row-span-5 rounded-md">
-                            <img className="w-full h-full object-cover rounded-md" alt="image" src={"https://res.cloudinary.com/dmifvdj2r/image/upload/v1740807889/21_xjyssr.jpg"} />
+                                <img className="w-full h-full object-cover rounded-md" alt="image" src={"https://res.cloudinary.com/dmifvdj2r/image/upload/v1740807889/21_xjyssr.jpg"} />
                             </div>
                             <div className="col-span-5 row-span-7 rounded-md">
-                            <img className="w-full h-full object-cover rounded-md object-center" alt="image" src={"https://res.cloudinary.com/dmifvdj2r/image/upload/v1740666983/13_ckh0xf.png"} />
+                                <img className="w-full h-full object-cover rounded-md object-center" alt="image" src={"https://res.cloudinary.com/dmifvdj2r/image/upload/v1740666983/13_ckh0xf.png"} />
                             </div>
                         </div>
                     </div>

@@ -4,7 +4,7 @@ import MainLayout from "../../components/layout/MainLayout";
 
 import BorderBg from "../../components/ui/borderbg";
 import bottombg from "/images/bottompattern.png";
-import eventimage from '/images/eventimage.png';
+import question from '/images/question.png';
 import { useParams } from "react-router-dom";
 import axiosInstance from "../../api/axiosInstance";
 import toast from "react-hot-toast";
@@ -89,7 +89,7 @@ function HighlightsPage({event}){
                             <div className="w-full lg:w-1/4 h-auto flex flex-col items-center ">
                               <div className="w-[278px] lg:w-full h-[378px] md:h-[480px]">
                                 <div className=" relative w-full h-full flex flex-col justify-center items-center p-10">
-                                    <img className="w-full h-full  z-40" src={image} alt={"eventimage"}/>
+                                    <img className="w-full h-full  z-40" src={question} alt={"eventimage"}/>
                                     <div className="absolute inset-0 flex flex-col justify-end items-start gap-[2px] event-border-two overflow-hidden z-50">
                                        
                                     </div>

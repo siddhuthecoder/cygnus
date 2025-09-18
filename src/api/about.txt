@@ -1,6 +1,0 @@
-/src/api
-    ├── index.js          // Main entry point for API functions
-    ├── auth.js           // Functions related to authentication (login, signup, logout)
-    ├── user.js           // Functions related to user data (fetch user info, update profile)
-    ├── products.js       // Functions related to product data (fetch products, add product, delete product)
-    └── utils.js          // Utility functions for API calls (handle errors, format responses)

@@ -4,6 +4,7 @@ import useTogglePassword from "../../hooks/useTogglePassword";
 import { FaEye,FaEyeSlash } from "react-icons/fa";
 import toast from "react-hot-toast";
 import axiosInstance from "../../api/axiosInstance";
+import loginimg from "/images/login.jpg";
 
 export default function Register() {
   let [formdata, setFormdata] = useState({

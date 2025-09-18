@@ -1,91 +1,3 @@
-// import { createBrowserRouter } from "react-router-dom";
-// import ErrorPage from "../pages/error";
-// import HomePage from "../pages/home";
-// import EventPage from "../pages/events";
-// import AboutPage from "../pages/about";
-// import SponsorsPage from "../pages/sponsers";
-// import TeamPage from "../pages/team";
-// import OneEvent from "../pages/events/oneevent";
-// import PrivateRoute from "../components/privateroutes";
-// import routesconfig from "../configs/routesconfig";
-// import SuccessPage from "../pages/auth/succespage";
-// import Signin from "../pages/auth/signinPage";
-// import ProfilePage from "../pages/profile/profile";
-// import RegisterPage from "../pages/auth/registerPage";
-// import EventRegisterPage from "../pages/auth/eventRegisterPage";
-// import HighlightsPage from "../pages/events/highligtspage";
-// import { Suspense } from "react";
-// import Loading from "../components/ui/loading";
-// export const mainRouter = createBrowserRouter([
-//     {
-//         path:"/login",
-//         element:<Signin/>,
-//         errorElement :<ErrorPage/>
-//     },
-//     {
-//         path:"/register",
-//         element: <RegisterPage/>,
-//         errorElement :<ErrorPage/>
-//     },
-//     {
-//         path:"/success",
-//         element: <SuccessPage/>,
-//         errorElement :<ErrorPage/>
-//     },
-//     {
-//         path: routesconfig.home,
-//         element:  <HomePage/> ,
-//         errorElement:<ErrorPage/>
-//     },
-//     {
-//         path: routesconfig.events,
-//         element:<EventPage/>,
-//         errorElement:<ErrorPage/>,
-//     },
-//     {
-//         path: `${routesconfig.events}/:eventId`, // Dynamic route for event details
-//         element: <OneEvent />,
-//         errorElement: <ErrorPage />,
-//     },
-//     {
-//         path: routesconfig.about,
-//         element:<AboutPage/>,
-//         errorElement:<ErrorPage/>
-//     },
-//     {
-//         path: routesconfig.team,
-//         element:<TeamPage/>,
-//         errorElement:<ErrorPage/>
-//     },
-//     {
-//         path: routesconfig.sponsors,
-//         element:<SponsorsPage/>,
-//         errorElement:<ErrorPage/>
-//     },
-//     {
-//         element: <PrivateRoute/>,//wraps the routes below and protect them
-//         children : [
-           
-//             {
-//                 path: routesconfig.profile,
-//                 element:<ProfilePage/>,
-//                 errorElement:<ErrorPage/>
-//             },
-//             {
-//                 path: `${routesconfig.events}/:id/register`,
-//                 element:<EventRegisterPage/>,
-//                 errorElement:<ErrorPage/>
-//             },
-//             {
-//                 path: `${routesconfig.highlight}/:id`,
-//                 element:<HighlightsPage/>,
-//                 errorElement:<ErrorPage/>
-//             },
-//         ]
-//     },
-    
-// ])
-
 
 import { createBrowserRouter } from "react-router-dom";
 import { lazy, Suspense } from "react";
@@ -208,15 +120,15 @@ export const mainRouter = createBrowserRouter([
     ),
     errorElement: <ErrorPage />,
   },
-  // {
-  //   path: `${routesconfig.events}/:eventId`, // Dynamic route for event details
-  //   element: (
-  //     <Suspense fallback={<Loading />}>
-  //       <OneEvent />
-  //     </Suspense>
-  //   ),
-  //   errorElement: <ErrorPage />,
-  // },
+  {
+    path: `${routesconfig.events}/:eventId`, // Dynamic route for event details
+    element: (
+      <Suspense fallback={<Loading />}>
+        <OneEvent />
+      </Suspense>
+    ),
+    errorElement: <ErrorPage />,
+  },
   {
     path: routesconfig.about,
     element: (
