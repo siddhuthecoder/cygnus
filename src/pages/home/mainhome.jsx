@@ -26,7 +26,7 @@ export default function Home(){
                         <div className="relative  w-full md:w-8/12 h-[50vh]  md:h-[62.5vh]">
                             <div className="absolute w-full h-full video-border z-40"></div>
                             <video className="absolute w-full h-full object-cover z-30  " src={"https://res.cloudinary.com/dnhkcqoci/video/upload/v1758174597/homebgvideo_rrmpzd.mp4"} muted loop autoPlay>
-                                <source src="https://www.instagram.com/reel/DFVGKgmSZTk/?igsh=MWRoczR0aHdzcjQ5MA==" type="video/mp4"/>
+                                <source src="https://res.cloudinary.com/dnhkcqoci/video/upload/v1758174597/homebgvideo_rrmpzd.mp4" type="video/mp4"/>
                             </video>
                             <p className="hidden md:block absolute bottom-10 w-full h-auto px-24 py-2 font-serif font-light text-base text-center text-[#F8F2BF] z-40 ">
                                 Step into a world where heritage meets creativity, bringing the essence of our cultural roots to life. Experience a fusion of past and present like never before! Immerse yourself in tradition, artistry and more.
