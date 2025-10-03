@@ -13,7 +13,7 @@ const MoreAbout = () => {
         </div>
         <div className='order-1 md:order-2 moreabout-border  about-border-box '>
           <div className='w-[240px] h-[160px] md:w-[360px] md:h-[240px] bg-white'>
-              <img className="w-full h-full object-cover " alt="image" src={"https://res.cloudinary.com/dmifvdj2r/image/upload/v1740666983/13_ckh0xf.png"} />
+              <img className="w-full h-full object-cover " alt="image" src={"/images/photo1.jpg"} />
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@ const MoreAbout = () => {
         <div className='md:order-1'>
           <div className='moreabout-border  about-border-box '>
             <div className='w-[240px] h-[160px] md:w-[360px] md:h-[240px]'>
-              <img className="w-full h-full object-cover " alt="image" src={"https://res.cloudinary.com/dmifvdj2r/image/upload/v1740667113/17_uwzrkw.jpg"} />
+              <img className="w-full h-full object-cover " alt="image" src={"/images/photo2.jpg"} />
             </div>
         </div>
         </div>

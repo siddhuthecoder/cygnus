@@ -33,16 +33,16 @@ function HomeAbout(){
                     <div className="w-full h-auto px-4 py-2 flex flex-col justify-center items-center about-border">
                         <div className="w-full h-[300px] md:h-[460px] p-2 grid grid-flow-col grid-cols-12 grid-rows-12 gap-2 ">
                             <div className="col-span-7 row-span-7  rounded-md">
-                                <img className="w-full h-full object-cover rounded-md" alt="image" src={"https://res.cloudinary.com/dmifvdj2r/image/upload/v1740666243/11_qmtcup.jpg"} />
+                                <img className="w-full h-full object-cover object-top rounded-md" alt="image" src={"/images/photo4.jpg"} />
                             </div>
                             <div className="col-span-7 row-span-5 rounded-md">
-                                <img className="w-full h-full object-cover rounded-md " alt="image" src={"https://res.cloudinary.com/dmifvdj2r/image/upload/v1740807888/19_rbd0cm.jpg"} />
+                                <img className="w-full h-full object-cover rounded-md " alt="image" src={"/images/photo1.jpg"} />
                             </div>
                             <div className="col-span-5 row-span-5 rounded-md">
-                                <img className="w-full h-full object-cover rounded-md" alt="image" src={"https://res.cloudinary.com/dmifvdj2r/image/upload/v1740807889/21_xjyssr.jpg"} />
+                                <img className="w-full h-full object-cover rounded-md" alt="image" src={"/images/photo2.jpg"} />
                             </div>
                             <div className="col-span-5 row-span-7 rounded-md">
-                                <img className="w-full h-full object-cover rounded-md object-center" alt="image" src={"https://res.cloudinary.com/dmifvdj2r/image/upload/v1740666983/13_ckh0xf.png"} />
+                                <img className="w-full h-full object-cover rounded-md object-center" alt="image" src={"/images/photo3.jpg"}/>
                             </div>
                         </div>
                     </div>
